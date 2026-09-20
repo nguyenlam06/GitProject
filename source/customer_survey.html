@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Market Research Survey</title>
+    <style>
+        body {
+            font-family: "Lucida Grande", "Lucida Sans Unicode", Tahoma, sans-serif;
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+        .survey-container {
+            background-color: #fff;
+            max-width: 650px;
+            margin: 0 auto;
+            padding: 20px 30px;
+            border: 1px solid #ccc;
+            box-shadow: 0 0 5px rgba(0,0,0,0.1);
+        }
+        h2 {
+            margin-top: 0;
+            color: #333;
+        }
+        p.subtitle {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+
+# 1. Di chuyển vào thư mục dự án
+cd C:/Users/ASUS/GitProject
+
+# 2. Tạo file source/customer_survey.html giao diện Survey chuẩn
+cat << 'EOF' > source/customer_survey.html
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Market Research Survey</title>
+    <style>
+        body {
+            font-family: "Lucida Grande", "Lucida Sans Unicode", Tahoma, sans-serif;
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+        .survey-container {
+            background-color: #fff;
+            max-width: 650px;
+            margin: 0 auto;
+            padding: 20px 30px;
+            border: 1px solid #ccc;
+            box-shadow: 0 0 5px rgba(0,0,0,0.1);
+        }
+        h2 {
+            margin-top: 0;
+            color: #333;
+        }
+        p.subtitle {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label.question {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 8px;
+            color: #333;
+        }
+        select, input[type="text"] {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+        .radio-options label, .checkbox-options label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: normal;
+            cursor: pointer;
+        }
+        /* Matrix Table Styling */
+        table.matrix-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        table.matrix-table th, table.matrix-table td {
+            border: 1px solid #e0e0e0;
+            padding: 8px;
+            text-align: center;
+        }
+        table.matrix-table th {
+            background-color: #f9f9f9;
+            font-weight: normal;
+            font-size: 13px;
+        }
+        table.matrix-table td.feature-label {
+            text-align: left;
+            font-size: 14px;
+        }
+        table.matrix-table tr:nth-child(even) {
+            background-color: #fdfdfd;
+        }
+        .btn-submit {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 3px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .btn-submit:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="survey-container">
+        <h2>Market Research Survey</h2>
+        <p class="subtitle">Please take a few minutes to give us feedback about our products.</p>
+        <hr style="border: 0; border-top: 1px solid #eee; margin-bottom: 20px;">
+
+        <form action="#" method="POST">
+            <!-- Age Group -->
+            <div class="form-group">
+                <label class="question">What is your age range?</label>
+                <select name="age_range">
+                    <option value="">-- Select Age Range --</option>
+                    <option value="under_18">Under 18</option>
+                    <option value="18_24">18 - 24</option>
+                    <option value="25_34">25 - 34</option>
+                    <option value="35_50">35 - 50</option>
+                    <option value="over_50">Over 50</option>
+                </select>
+            </div>
+
+            <!-- Income Range -->
+            <div class="form-group">
+                <label class="question">What is your yearly income?</label>
+                <select name="income_range">
+                    <option value="">-- Select Income Range --</option>
+                    <option value="under_25k">$0 - $25,000</option>
+                    <option value="25k_50k">$25,001 - $50,000</option>
+                    <option value="50k_100k">$50,001 - $100,000</option>
+                    <option value="over_100k">$100,000+</option>
+                </select>
+            </div>
+
+            <!-- Gender -->
+            <div class="form-group">
+                <label class="question">Gender</label>
+                <div class="radio-options">
+                    <label><input type="radio" name="gender" value="Male"> Male</label>
+                    <label><input type="radio" name="gender" value="Female"> Female</label>
+                </div>
+            </div>
+
+            <!-- Which products do you use -->
+            <div class="form-group">
+                <label class="question">Which of the following products do you use? (Check all that apply)</label>
+                <div class="checkbox-options">
+                    <label><input type="checkbox" name="products" value="Product 1"> Product 1</label>
+                    <label><input type="checkbox" name="products" value="Product 2"> Product 2</label>
+                    <label><input type="checkbox" name="products" value="Product 3"> Product 3</label>
+                </div>
+            </div>
+
+            <!-- Purchase Frequency -->
+            <div class="form-group">
+                <label class="question">How often do you purchase our products?</label>
+                <div class="radio-options">
+                    <label><input type="radio" name="frequency" value="Everyday"> Everyday</label>
+                    <label><input type="radio" name="frequency" value="Once a week"> Once a week</label>
+                    <label><input type="radio" name="frequency" value="Once a month"> Once a month</label>
+                    <label><input type="radio" name="frequency" value="Once a year"> Once a year</label>
+                </div>
+            </div>
+
+            <!-- Satisfaction Matrix Table -->
+            <div class="form-group">
+                <label class="question">How satisfied are you with the following features?</label>
+                <table class="matrix-table">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>Very Unsatisfied</th>
+                            <th>Unsatisfied</th>
+                            <th>Neutral</th>
+                            <th>Satisfied</th>
+                            <th>Very Satisfied</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="feature-label">Product Quality</td>
+                            <td><input type="radio" name="satisfaction_quality" value="1"></td>
+                            <td><input type="radio" name="satisfaction_quality" value="2"></td>
+                            <td><input type="radio" name="satisfaction_quality" value="3"></td>
+                            <td><input type="radio" name="satisfaction_quality" value="4"></td>
+                            <td><input type="radio" name="satisfaction_quality" value="5"></td>
+                        </tr>
+                        <tr>
+                            <td class="feature-label">Product Price</td>
+                            <td><input type="radio" name="satisfaction_price" value="1"></td>
+                            <td><input type="radio" name="satisfaction_price" value="2"></td>
+                            <td><input type="radio" name="satisfaction_price" value="3"></td>
+                            <td><input type="radio" name="satisfaction_price" value="4"></td>
+                            <td><input type="radio" name="satisfaction_price" value="5"></td>
+                        </tr>
+                        <tr>
+                            <td class="feature-label">Customer Service</td>
+                            <td><input type="radio" name="satisfaction_service" value="1"></td>
+                            <td><input type="radio" name="satisfaction_service" value="2"></td>
+                            <td><input type="radio" name="satisfaction_service" value="3"></td>
+                            <td><input type="radio" name="satisfaction_service" value="4"></td>
+                            <td><input type="radio" name="satisfaction_service" value="5"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="form-group">
+                <button type="submit" class="btn-submit">Submit</button>
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>
