@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>ĐĂNG KÝ HỌC VIÊN</title>
+    <style>
+        body { font-family: Arial, sans-serif; display: flex; justify-content: center; padding-top: 30px; }
+        .register-container { width: 500px; border: 1px solid #00ecd0; padding: 20px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        h2 { background-color: #0d47a1; color: white; text-align: center; padding: 10px; margin-top: 0; font-size: 20px; }
+        table { width: 100%; }
+        td { padding: 8px; }
+        .title-col { font-weight: bold; color: #0d47a1; width: 30%; }
+        input[type="text"], input[type="email"], select, textarea { width: 95%; padding: 5px; border: 1px solid #ccc; border-radius: 3px; }
+        .btn-group { text-align: center; }
+        .btn-register { background-color: #0d47a1; color: white; padding: 6px 15px; border: none; border-radius: 3px; cursor: pointer; }
+        .btn-cancel { background-color: #757575; color: white; padding: 6px 15px; border: none; border-radius: 3px; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <div class="register-container">
+        <h2>ĐĂNG KÝ HỌC VIÊN</h2>
+        <form action="#" method="POST">
+            <table>
+                <tr>
+                    <td class="title-col">Họ và tên</td>
+                    <td><input type="text" name="fullname" required></td>
+                </tr>
+                <tr>
+                    <td class="title-col">Ngày sinh</td>
+                    <td><input type="text" name="dob" placeholder="dd/mm/yyyy" required></td>
+                </tr>
+                <tr>
+                    <td class="title-col">Giới tính</td>
+                    <td>
+                        <label><input type="radio" name="gender" value="male" checked> Nam</label>
+                        <label><input type="radio" name="gender" value="female"> Nữ</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="title-col">Địa chỉ</td>
+                    <td><textarea name="address" rows="3"></textarea></td>
+                </tr>
+                <tr>
+                    <td class="title-col">Lớp</td>
+                    <td>
+                        <select name="class_name">
+                            <option value="">-- Chọn lớp --</option>
+                            <option value="C0823G1">C0823G1</option>
+                            <option value="C0923H1">C0923H1</option>
+                            <option value="C1023I1">C1023I1</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="title-col">Email</td>
+                    <td><input type="email" name="email" required></td>
+                </tr>
+                <tr>
+                    <td class="title-col">Điện thoại</td>
+                    <td><input type="text" name="phone" required></td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="btn-group">
+                        <input type="submit" value="Đăng ký" class="btn-register">
+                        <input type="reset" value="Hủy" class="btn-cancel">
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>

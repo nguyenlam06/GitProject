@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>SỞ THÍCH CỦA BẠN</title>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #f4f4f4; display: flex; justify-content: center; padding-top: 30px; }
+        .form-container { background-color: #fff; border: 2px solid #2e7d32; width: 450px; padding: 15px; border-radius: 5px; }
+        h2 { background-color: #ff9800; color: white; text-align: center; padding: 10px; margin-top: 0; font-size: 18px; }
+        table { width: 100%; }
+        td { padding: 6px; vertical-align: top; }
+        .label-col { width: 30%; font-weight: bold; color: #1b5e20; text-align: right; }
+        .checkbox-group { color: #ff6f00; }
+        .btn-submit, .btn-reset { background-color: #e0e0e0; border: 1px solid #757575; padding: 5px 15px; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>SỞ THÍCH CỦA BẠN</h2>
+        <form action="#" method="POST">
+            <table>
+                <tr>
+                    <td class="label-col">Họ và tên</td>
+                    <td><input type="text" name="yourname" size="30" required></td>
+
+cd C:/Users/ASUS/GitProject
+
+# Tạo file Form Sở Thích
+cat << 'EOF' > source/form_so_thich.html
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>SỞ THÍCH CỦA BẠN</title>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #f4f4f4; display: flex; justify-content: center; padding-top: 30px; }
+        .form-container { background-color: #fff; border: 2px solid #2e7d32; width: 450px; padding: 15px; border-radius: 5px; }
+        h2 { background-color: #ff9800; color: white; text-align: center; padding: 10px; margin-top: 0; font-size: 18px; }
+        table { width: 100%; }
+        td { padding: 6px; vertical-align: top; }
+        .label-col { width: 30%; font-weight: bold; color: #1b5e20; text-align: right; }
+        .checkbox-group { color: #ff6f00; }
+        .btn-submit, .btn-reset { background-color: #e0e0e0; border: 1px solid #757575; padding: 5px 15px; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>SỞ THÍCH CỦA BẠN</h2>
+        <form action="#" method="POST">
+            <table>
+                <tr>
+                    <td class="label-col">Họ và tên</td>
+                    <td><input type="text" name="yourname" size="30" required></td>
+                </tr>
+                <tr>
+                    <td class="label-col">Email</td>
+                    <td><input type="email" name="email" size="30" required></td>
+                </tr>
+                <tr>
+                    <td class="label-col">Sở thích</td>
+                    <td class="checkbox-group">
+                        <label><input type="checkbox" name="hobby" value="Thao tac"> Thể thao</label>
+                        <label><input type="checkbox" name="hobby" value="Am nhac"> Âm nhạc</label>
+                        <label><input type="checkbox" name="hobby" value="Doc sach"> Đọc sách</label><br>
+                        <label><input type="checkbox" name="hobby" value="Lut web"> Lướt web</label>
+                        <label><input type="checkbox" name="hobby" value="Choi game"> Chơi game</label>
+                        <label><input type="checkbox" name="hobby" value="Dien anh"> Điện ảnh</label><br>
+                        <label><input type="checkbox" name="hobby" value="Du lich"> Du lịch</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <input type="submit" value="Gửi thông tin" class="btn-submit">
+                        <input type="reset" value="Nhập lại" class="btn-reset">
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>
