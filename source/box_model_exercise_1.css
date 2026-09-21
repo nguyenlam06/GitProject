@@ -1,0 +1,62 @@
+/* Class chung cho tất cả các thẻ card */
+.card {
+    width: 280px;
+    height: 150px;
+    padding: 20px;
+    border: 5px solid #3498db; /* Màu xanh dương */
+    margin: 20px;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    border-radius: 8px;
+}
+
+/* Thẻ 1: Sử dụng box-sizing: content-box và màu nền xanh lá */
+.card:nth-child(1) {
+    box-sizing: content-box;
+    background-color: #2ecc71; /* Màu xanh lá cây */
+}
+
+/* Thẻ 2: Sử dụng box-sizing: border-box và màu nền vàng */
+.card:nth-child(2) {
+    box-sizing: border-box;
+    background-color: #f1c40f; /* Màu vàng */
+    color: #333333; /* Chữ màu tối để dễ nhìn trên nền vàng */
+}
+
+/* Thẻ 3: Sử dụng box-sizing: border-box và màu nền đỏ */
+.card:nth-child(3) {
+    box-sizing: border-box;
+    background-color: #e74c3c; /* Màu đỏ */
+}
+
+/* Định dạng tiêu đề & đoạn văn bên trong thẻ card */
+.card h3 {
+    margin-top: 0;
+    margin-bottom: 8px;
+    font-size: 18px;
+}
+
+.card p {
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+/* Căn chỉnh các thẻ card trên trang */
+body {
+    background-color: #f8f9fa;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+h1 {
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}

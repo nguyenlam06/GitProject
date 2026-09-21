@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập Sử dụng Box Model 1</title>
+    <link rel="stylesheet" href="box_model_exercise_1.css">
+</head>
+<body>
+
+    <h1>[Bài tập] Xây dựng bố cục với Mô hình hộp CSS (Box Model)</h1>
+
+    <div class="card-container">
+        <!-- Thẻ 1: content-box (Màu xanh lá) -->
+        <div class="card">
+            <h3>Thẻ 1: content-box</h3>
+            <p><strong>Kích thước tổng: 330px x 200px</strong><br>width (280) + padding (40) + border (10) = 330px</p>
+        </div>
+
+        <!-- Thẻ 2: border-box (Màu vàng) -->
+        <div class="card">
+            <h3>Thẻ 2: border-box</h3>
+            <p><strong>Kích thước tổng: 280px x 150px</strong><br>Padding & Border được tính bên trong width 280px</p>
+        </div>
+
+        <!-- Thẻ 3: border-box (Màu đỏ) -->
+        <div class="card">
+            <h3>Thẻ 3: border-box</h3>
+            <p><strong>Kích thước tổng: 280px x 150px</strong><br>Bố cục cố định, không bị phình to khi có padding & border</p>
+        </div>
+    </div>
+
+</body>
+</html>
