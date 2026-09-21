@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập: Thiết kế Trang Giới Thiệu Sản Phẩm (iPhone 16 Pro Style)</title>
+    <!-- Bootstrap 5 CSS & Font Awesome -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        body {
+            background-color: #000000;
+            color: #f5f5f7;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+        .text-gradient {
+            background: linear-gradient(135deg, #f3ec78, #af4261);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .apple-card {
+            background-color: #161617;
+            border: 1px solid #333336;
+            border-radius: 18px;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+        .apple-card:hover {
+            transform: scale(1.02);
+            border-color: #6e6e73;
+        }
+        .hero-img {
+            max-height: 480px;
+            object-fit: contain;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black border-bottom border-dark sticky-top">
+        <div class="container d-flex justify-content-between align-items-center">
+            <a class="navbar-brand d-flex align-items-center fs-4" href="#">
+                <i class="fab fa-apple me-2"></i> <span class="fw-bold">iPhone 16 Pro</span>
+            </a>
+            <div class="d-flex align-items-center gap-3">
+                <span class="text-secondary small d-none d-md-inline">Từ 28.999.000đ</span>
+                <a href="#buy" class="btn btn-primary btn-sm rounded-pill px-3 fw-semibold">Mua ngay</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="container text-center my-5 py-5">
+        <div class="row justify-content-center align-items-center">
+            <div class="col-lg-10">
+                <p class="text-uppercase text-warning fw-semibold mb-2 tracking-wide">Thiết kế Titanium mới</p>
+                <h1 class="display-2 fw-bold text-gradient mb-3">iPhone 16 Pro</h1>
+                <p class="lead text-secondary mb-4 mx-auto w-75">Sức mạnh vượt trội từ chip A18 Pro. Khả năng quay phim 4K 120 fps Dolby Vision đẳng cấp điện ảnh. Phím điều khiển camera hoàn toàn mới.</p>
+                <div class="d-flex justify-content-center align-items-center gap-3 mb-5">
+                    <a href="#buy" class="btn btn-light rounded-pill px-4 py-2 fw-semibold">Mua hàng</a>
+                    <a href="#specs" class="btn btn-outline-light rounded-pill px-4 py-2 fw-semibold">Xem thông số</a>
+                </div>
+                <div class="d-flex justify-content-center">
+                    <img src="https://picsum.photos/900/500?random=30" alt="iPhone 16 Pro" class="img-fluid hero-img rounded-4 shadow-lg">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Key Highlights Grid (Flexbox & Grid Layout) -->
+    <section id="specs" class="container my-5 py-5">
+        <div class="text-center mb-5">
+            <h2 class="display-5 fw-bold text-white mb-2">Đỉnh Cao Công Nghệ</h2>
+            <p class="text-secondary">Những nâng cấp đột phá mang tới trải nghiệm đỉnh cao</p>
+        </div>
+
+        <div class="row g-4 justify-content-center">
+            <!-- Feature 1: Chipset -->
+            <div class="col-md-6 col-lg-4">
+                <div class="apple-card p-4 h-100 d-flex flex-column justify-content-between">
+                    <div>
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <i class="fas fa-microchip fs-1 text-warning"></i>
+                            <span class="badge bg-dark border border-secondary text-secondary">Hiệu năng</span>
+                        </div>
+                        <h4 class="fw-bold text-white">Chip A18 Pro</h4>
+                        <p class="text-secondary small">Vi xử lý nhanh kỷ lục trên điện thoại thông minh, hỗ trợ xử lý Apple Intelligence mượt mà và tiết kiệm năng lượng tối đa.</p>
+                    </div>
+                    <div class="pt-3 border-top border-dark d-flex justify-content-between align-items-center">
+                        <span class="text-muted small">CPU 6-core</span>
+                        <span class="text-warning fw-bold">+20% Hiệu năng</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 2: Camera System -->
+            <div class="col-md-6 col-lg-4">
+                <div class="apple-card p-4 h-100 d-flex flex-column justify-content-between">
+                    <div>
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <i class="fas fa-camera fs-1 text-info"></i>
+                            <span class="badge bg-dark border border-secondary text-secondary">Nhiếp ảnh</span>
+                        </div>
+                        <h4 class="fw-bold text-white">Hệ thống Camera Pro</h4>
+                        <p class="text-secondary small">Camera Fusion 48MP với cảm biến Quad-pixel thế hệ thứ hai. Quay video 4K 120 fps Dolby Vision đỉnh cao sắc nét.</p>
+                    </div>
+                    <div class="pt-3 border-top border-dark d-flex justify-content-between align-items-center">
+                        <span class="text-muted small">Zoom quang học</span>
+                        <span class="text-info fw-bold">5x Telephoto</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 3: Battery & Charging -->
+            <div class="col-md-6 col-lg-4">
+                <div class="apple-card p-4 h-100 d-flex flex-column justify-content-between">
+                    <div>
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <i class="fas fa-battery-full fs-1 text-success"></i>
+                            <span class="badge bg-dark border border-secondary text-secondary">Thời lượng Pin</span>
+                        </div>
+                        <h4 class="fw-bold text-white">Thời Lượng Pin Kỷ Lục</h4>
+                        <p class="text-secondary small">Xem video lên đến 33 giờ liên tục. Hỗ trợ sạc nhanh MagSafe lên tới 25W với củ sạc 30W trở lên.</p>
+                    </div>
+                    <div class="pt-3 border-top border-dark d-flex justify-content-between align-items-center">
+                        <span class="text-muted small">Thời gian xem video</span>
+                        <span class="text-success fw-bold">Lên đến 33 giờ</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Detailed Tech Specs Section -->
+    <section class="container my-5 py-4">
+        <div class="bg-dark bg-opacity-50 border border-dark rounded-4 p-4 p-md-5">
+            <div class="row align-items-center gy-4">
+                <div class="col-lg-5">
+                    <h3 class="display-6 fw-bold text-white mb-3">Titanium. <br>Xung quanh bạn.</h3>
+                    <p class="text-secondary mb-4">Lớp vỏ Titanium cấp độ 5 nhẹ hơn, bền hơn kết hợp cùng viền màn hình siêu mỏng nhất từng có trên các sản phẩm Apple.</p>
+                    <ul class="list-unstyled d-flex flex-column gap-3">
+                        <li class="d-flex align-items-center">
+                            <i class="fas fa-shield-alt text-primary fs-4 me-3"></i>
+                            <div>
+                                <strong class="text-white d-block">Ceramic Shield thế hệ mới</strong>
+                                <span class="text-muted small">Bền hơn gấp 2 lần so với mặt kính mọi điện thoại khác.</span>
+                            </div>
+                        </li>
+                        <li class="d-flex align-items-center">
+                            <i class="fas fa-water text-info fs-4 me-3"></i>
+                            <div>
+                                <strong class="text-white d-block">Kháng nước & Kháng bụi IP68</strong>
+                                <span class="text-muted small">An toàn ở độ sâu tối đa 6 mét trong vòng 30 phút.</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-7 text-center">
+                    <img src="https://picsum.photos/700/450?random=31" alt="Titanium Frame Detail" class="img-fluid rounded-4 border border-secondary">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Buy / Call to Action Section -->
+    <section id="buy" class="container text-center my-5 py-5">
+        <div class="py-4">
+            <h2 class="display-5 fw-bold text-white mb-3">Sở hữu iPhone 16 Pro ngay hôm nay</h2>
+            <p class="text-secondary lead mb-4">Giao hàng miễn phí toàn quốc. Hỗ trợ trả góp 0% lãi suất.</p>
+            <div class="d-flex flex-wrap justify-content-center gap-3">
+                <button class="btn btn-primary btn-lg rounded-pill px-5 fw-bold">Mua từ 28.999.000đ</button>
+                <button class="btn btn-outline-light btn-lg rounded-pill px-4 fw-bold">Liên hệ tư vấn</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-top border-dark bg-black py-4 mt-5 text-secondary small">
+        <div class="container text-center text-md-start">
+            <div class="row gy-3 align-items-center">
+                <div class="col-md-6">
+                    <p class="mb-0">&copy; 2026 Apple Inc. Bản quyền thuộc về thực hành trang giới thiệu sản phẩm Bootstrap.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="text-secondary text-decoration-none me-3">Chính sách bảo mật</a>
+                    <a href="#" class="text-secondary text-decoration-none me-3">Điều khoản sử dụng</a>
+                    <a href="#" class="text-secondary text-decoration-none">Sơ đồ trang</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
