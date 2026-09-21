@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập: Phân tích và Xây dựng Cấu Trúc Website Template</title>
+    <style>
+        /* CSS Reset & Cơ bản */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f4f6f9;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Phần báo cáo phân tích */
+        .analysis-section {
+            background-color: #ffffff;
+            border-bottom: 3px solid #007bff;
+            padding: 30px 20px;
+            max-width: 1100px;
+            margin: 20px auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        .analysis-section h1 {
+            color: #007bff;
+            margin-bottom: 15px;
+            font-size: 1.8rem;
+        }
+
+        .analysis-section h2 {
+            color: #2c3e50;
+            margin: 15px 0 10px;
+            font-size: 1.3rem;
+            border-left: 4px solid #007bff;
+            padding-left: 10px;
+        }
+
+        .analysis-section ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        .analysis-section li {
+            margin-bottom: 8px;
+        }
+
+        .demo-label {
+            text-align: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #2c3e50;
+            margin: 40px 0 20px;
+        }
+
+        /* Bố cục trang web mẫu (Template Layout) */
+        .site-container {
+            max-width: 1100px;
+            margin: 0 auto 50px;
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        /* 1. Header */
+        header {
+            background: #2c3e50;
+            color: #ffffff;
+            padding: 30px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.2rem;
+            margin-bottom: 5px;
+        }
+
+        header p {
+            font-size: 1rem;
+            color: #bdc3c7;
+        }
+
+        /* 2. Navigation Menu */
+        nav {
+            background: #34495e;
+            border-top: 1px solid #455a64;
+            border-bottom: 1px solid #455a64;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            flex-wrap: wrap;
+        }
+
+        nav ul li a {
+            display: block;
+            padding: 14px 24px;
+            color: #ecf0f1;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        nav ul li a:hover {
+            background: #007bff;
+            color: #ffffff;
+        }
+
+        /* 3. Main Content Section */
+        .content-wrapper {
+            display: flex;
+            padding: 30px;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .main-content {
+            flex: 2;
+            min-width: 300px;
+        }
+
+        .main-content h2 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-size: 1.6rem;
+        }
+
+        .main-content p {
+            margin-bottom: 15px;
+            color: #555;
+            text-align: justify;
+        }
+
+        .featured-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 6px;
+            margin: 15px 0;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .sidebar {
+            flex: 1;
+            min-width: 250px;
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 6px;
+            border: 1px solid #e9ecef;
+        }
+
+        .sidebar h3 {
+            color: #2c3e50;
+            margin-bottom: 12px;
+            font-size: 1.2rem;
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 5px;
+        }
+
+        .sidebar ul {
+            list-style: none;
+        }
+
+        .sidebar ul li {
+            padding: 8px 0;
+            border-bottom: 1px solid #dee2e6;
+        }
+
+        .sidebar ul li a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        /* 4. Footer */
+        footer {
+            background: #1a252f;
+            color: #ecf0f1;
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .content-wrapper {
+                flex-direction: column;
+            }
+
+            nav ul {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            nav ul li a {
+                padding: 10px;
+                border-bottom: 1px solid #455a64;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- PHẦN 1: BÁO CÁO PHÂN TÍCH CẤU TRÚC WEBSITE -->
+    <div class="analysis-section">
+        <h1>Báo Cáo Phân Tích Cấu Trúc Website</h1>
+        <p><strong>Website phân tích:</strong> W3Schools / Trang thông tin tin tức công nghệ</p>
+
+        <h2>1. Mô tả Bố cục & Các Thành phần Chính:</h2>
+        <ul>
+            <li><strong>Header (Đầu trang):</strong> Đặt ở vị trí trên cùng, chứa tên thương hiệu/Logo và khẩu hiệu chính của trang web. Thiết kế nổi bật giúp định hình nhận diện thương hiệu ngay khi người dùng truy cập.</li>
+            <li><strong>Navigation Menu (Thanh điều hướng):</strong> Nằm ngay dưới Header, gồm danh sách dạng hàng ngang với 4+ mục liên kết chính (Trang chủ, Giới thiệu, Bài viết, Liên hệ). Có hiệu ứng đổi màu khi rê chuột (hover) để tăng trải nghiệm người dùng (UX).</li>
+            <li><strong>Content Section (Phần nội dung chính):</strong> Chia làm bố cục 2 cột linh hoạt (Flexbox):
+                <ul>
+                    <li><em>Cột chính (Main Content):</em> Chứa tiêu đề bài viết, các đoạn văn bản mô tả và hình ảnh minh họa chất lượng cao.</li>
+                    <li><em>Cột phụ (Sidebar):</em> Chứa danh mục tin tức liên quan và các liên kết nhanh.</li>
+                </ul>
+            </li>
+            <li><strong>Footer (Chân trang):</strong> Nằm ở cuối trang với nền tối màu, chứa thông tin bản quyền (Copyright), thông tin liên hệ và các chính sách bảo mật.</li>
+        </ul>
+
+        <h2>2. Đánh giá tính hữu ích của Template Layout:</h2>
+        <p>Bố cục được phân định rõ ràng giúp người dùng dễ dàng tìm kiếm thông tin, thanh điều hướng mạch lạc mang lại trải nghiệm duyệt web trực quan và thân thiện trên cả máy tính lẫn thiết bị di động.</p>
+    </div>
+
+    <div class="demo-label">Giao Diện Template Đã Xây Dựng Thực Tế</div>
+
+    <!-- PHẦN 2: BỐ CỤC TEMPLATE WEBSITE TƯƠNG TỰ -->
+    <div class="site-container">
+
+        <!-- Header -->
+        <header>
+            <h1>TechWorld Portal</h1>
+            <p>Trang tin tức & Cập nhật Công nghệ Hàng đầu</p>
+        </header>
+
+        <!-- Navigation Menu -->
+        <nav>
+            <ul>
+                <li><a href="#">Trang Chủ</a></li>
+                <li><a href="#about">Giới Thiệu</a></li>
+                <li><a href="#services">Dịch Vụ</a></li>
+                <li><a href="#contact">Liên Hệ</a></li>
+            </ul>
+        </nav>
+
+        <!-- Main Content Section -->
+        <div class="content-wrapper">
+            <main class="main-content">
+                <h2>Cấu Trúc Website Template Hiện Đại</h2>
+                <p>Một giao diện website tiêu chuẩn cần có cấu trúc phân chia hợp lý giữa các khu vực nội dung để giúp người đọc điều hướng dễ dàng. Việc áp dụng Flexbox hoặc CSS Grid giúp các thành phần tự động co giãn linh hoạt trên nhiều kích thước màn hình khác nhau.</p>
+                
+                <img src="https://picsum.photos/800/400?random=105" alt="Hình ảnh minh họa công nghệ" class="featured-image">
+
+                <p>Mỗi phần trong template giữ một vai trò riêng biệt: Header tạo dấu ấn thương hiệu, Navigation dẫn lối người dùng, Content truyền tải thông tin giá trị và Footer hoàn thiện trải nghiệm với thông tin pháp lý & liên hệ.</p>
+            </main>
+
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <h3>Danh Mục Nổi Bật</h3>
+                <ul>
+                    <li><a href="#">• Lập trình Web Frontend</a></li>
+                    <li><a href="#">• Thiết kế UX/UI Chuyên nghiệp</a></li>
+                    <li><a href="#">• Công nghệ AI & Machine Learning</a></li>
+                    <li><a href="#">• Xu hướng CSS Grid & Flexbox</a></li>
+                </ul>
+            </aside>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <p>&copy; 2025 TechWorld Portal. Tất cả quyền được bảo lưu. Thiết kế bởi Student Developer.</p>
+        </footer>
+
+    </div>
+
+</body>
+
+</html>
