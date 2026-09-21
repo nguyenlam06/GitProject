@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thực hành: CSS grid-row-gap Property</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            padding: 20px;
+            color: #333;
+        }
+
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            margin-top: 30px;
+            margin-bottom: 10px;
+            color: #8e44ad;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            background-color: #2c3e50;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .grid-item {
+            background-color: #8e44ad;
+            color: white;
+            padding: 20px;
+            font-size: 16px;
+            font-weight: bold;
+            text-align: center;
+            border-radius: 4px;
+        }
+
+        /* Ví dụ 1: Đơn vị cố định length (px) */
+        .ex-length {
+            grid-row-gap: 30px;
+        }
+
+        /* Ví dụ 2: Đơn vị phần trăm percentage (%) */
+        .ex-percent {
+            grid-row-gap: 5%;
+        }
+
+        /* Ví dụ 3: Giá trị toàn cục global-value (initial/inherit) */
+        .ex-global {
+            grid-row-gap: initial; /* Mặc định là 0 */
+        }
+    </style>
+</head>
+<body>
+    <h1>Thực Hành: CSS grid-row-gap Property</h1>
+
+    <h2>1. Đơn vị cố định (grid-row-gap: 30px)</h2>
+    <p>Tạo khoảng cách giữa các hàng cố định là 30px.</p>
+    <div class="grid-container ex-length">
+        <div class="grid-item">Item 1</div>
+        <div class="grid-item">Item 2</div>
+        <div class="grid-item">Item 3</div>
+        <div class="grid-item">Item 4</div>
+        <div class="grid-item">Item 5</div>
+        <div class="grid-item">Item 6</div>
+    </div>
+
+    <h2>2. Đơn vị phần trăm (grid-row-gap: 5%)</h2>
+    <p>Khoảng cách giữa các hàng chiếm 5% chiều cao/chiều dài của lưới.</p>
+    <div class="grid-container ex-percent">
+        <div class="grid-item">Item 1</div>
+        <div class="grid-item">Item 2</div>
+        <div class="grid-item">Item 3</div>
+        <div class="grid-item">Item 4</div>
+        <div class="grid-item">Item 5</div>
+        <div class="grid-item">Item 6</div>
+    </div>
+
+    <h2>3. Giá trị toàn cục (grid-row-gap: initial)</h2>
+    <p>Thiết lập khoảng cách giữa các hàng về giá trị mặc định (0px).</p>
+    <div class="grid-container ex-global">
+        <div class="grid-item">Item 1</div>
+        <div class="grid-item">Item 2</div>
+        <div class="grid-item">Item 3</div>
+        <div class="grid-item">Item 4</div>
+        <div class="grid-item">Item 5</div>
+        <div class="grid-item">Item 6</div>
+    </div>
+</body>
+</html>
