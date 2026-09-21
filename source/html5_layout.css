@@ -1,0 +1,118 @@
+/* Reset định dạng chung */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f9;
+    color: #333333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Khối khung chứa chính */
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Header */
+header {
+    background-color: #2c3e50;
+    color: #ffffff;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+
+header p {
+    font-size: 15px;
+    color: #bdc3c7;
+}
+
+/* Nav */
+nav {
+    background-color: #34495e;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li a {
+    display: block;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 14px 20px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #1abc9c;
+}
+
+/* Bố cục 2 cột với Flexbox */
+.main-content {
+    display: flex;
+    padding: 20px;
+    gap: 20px;
+}
+
+/* Section (Nội dung chính chiếm 70%) */
+section {
+    flex: 7;
+}
+
+article {
+    background-color: #fdfdfd;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+article h2 {
+    color: #2c3e50;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+/* Aside (Sidebar chiếm 30%) */
+aside {
+    flex: 3;
+    background-color: #ecf0f1;
+    border: 1px solid #dcdcdc;
+    border-radius: 6px;
+    padding: 20px;
+}
+
+aside h3 {
+    color: #2c3e50;
+    font-size: 18px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #34495e;
+    padding-bottom: 5px;
+}
+
+/* Footer */
+footer {
+    background-color: #2c3e50;
+    color: #ffffff;
+    text-align: center;
+    padding: 15px 20px;
+    font-size: 14px;
+}
