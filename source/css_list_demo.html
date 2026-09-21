@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Thực hành Danh Sách trong CSS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 30px;
+            background-color: #f8f9fa;
+        }
+        h2 {
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 5px;
+        }
+
+        /* 1. Thay đổi kiểu đánh dấu (list-style-type) */
+        ul.a { list-style-type: circle; }
+        ul.b { list-style-type: square; }
+        ol.c { list-style-type: upper-roman; }
+        ol.d { list-style-type: lower-alpha; }
+
+        /* 2. Đánh dấu bằng hình ảnh (list-style-image) */
+        ul.img-list {
+            list-style-image: url('https://img.icons8.com/color/16/000000/checkmark.png');
+        }
+
+        /* 3. Vị trí đánh dấu (list-style-position) */
+        ul.pos-outside {
+            list-style-position: outside;
+            background: #e3f2fd;
+            padding: 10px 30px;
+        }
+        ul.pos-inside {
+            list-style-position: inside;
+            background: #fff3e0;
+            padding: 10px 30px;
+        }
+
+        /* 4. Thuộc tính rút gọn (list-style shorthand) */
+        ul.shorthand {
+            list-style: square inside url('https://img.icons8.com/color/16/000000/star.png');
+        }
+
+        /* 5. Định kiểu danh sách với màu sắc */
+        ol.colored-list {
+            background: #3399ff;
+            padding: 20px 40px;
+            border-radius: 8px;
+        }
+        ol.colored-list li {
+            background: #ffe6e6;
+            color: #d9534f;
+            padding: 8px;
+            margin: 5px 0;
+            font-weight: bold;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Thực Hành Định Kiểu Danh Sách Bằng CSS</h1>
+
+    <h2>1. Thay đổi kiểu đánh dấu (list-style-type)</h2>
+    <p>Danh sách không thứ tự (ul):</p>
+    <ul class="a">
+        <li>Kiểu Circle</li>
+        <li>Kiểu Circle</li>
+    </ul>
+    <ul class="b">
+        <li>Kiểu Square</li>
+        <li>Kiểu Square</li>
+    </ul>
+
+    <p>Danh sách có thứ tự (ol):</p>
+    <ol class="c">
+        <li>Số La Mã in hoa (upper-roman)</li>
+        <li>Số La Mã in hoa (upper-roman)</li>
+    </ol>
+    <ol class="d">
+        <li>Chữ cái thường (lower-alpha)</li>
+        <li>Chữ cái thường (lower-alpha)</li>
+    </ol>
+
+    <h2>2. Đánh dấu bằng hình ảnh (list-style-image)</h2>
+    <ul class="img-list">
+        <li>Mục sử dụng icon tích xanh làm bullet</li>
+        <li>Mục sử dụng icon tích xanh làm bullet</li>
+    </ul>
+
+    <h2>3. Vị trí đánh dấu (list-style-position)</h2>
+    <p><strong>Outside (Mặc định - Đánh dấu nằm ngoài dòng nội dung):</strong></p>
+    <ul class="pos-outside">
+        <li>HTML5 & CSS3 Essentials</li>
+        <li>JavaScript & Frameworks</li>
+    </ul>
+
+    <p><strong>Inside (Đánh dấu nằm bên trong dòng nội dung):</strong></p>
+    <ul class="pos-inside">
+        <li>HTML5 & CSS3 Essentials</li>
+        <li>JavaScript & Frameworks</li>
+    </ul>
+
+    <h2>4. Thuộc tính rút gọn (list-style)</h2>
+    <ul class="shorthand">
+        <li>Cú pháp rút gọn: <code>list-style: type position image;</code></li>
+        <li>Nếu ảnh không tải được, sẽ dùng kiểu square thay thế</li>
+    </ul>
+
+    <h2>5. Định kiểu danh sách với màu sắc</h2>
+    <ol class="colored-list">
+        <li>Mục 1: Thẻ ol quyết định màu nền ngoài</li>
+        <li>Mục 2: Thẻ li quyết định màu chữ và nền từng dòng</li>
+        <li>Mục 3: Giúp giao diện sinh động hơn</li>
+    </ol>
+
+</body>
+</html>
