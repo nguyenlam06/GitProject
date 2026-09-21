@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập: Trang Đăng Ký với Bootstrap Forms</title>
+    <!-- Nhúng Bootstrap 5 CSS CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+<body class="bg-light py-5">
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-8 col-lg-6">
+                <!-- Thẻ Card bao bọc Form đăng ký -->
+                <div class="card shadow-lg border-0 rounded-3">
+                    <div class="card-header bg-primary text-white text-center py-3">
+                        <h2 class="h4 mb-1 fw-bold">TẠO TÀI KHOẢN MỚI</h2>
+                        <p class="small mb-0 text-white-50">Vui lòng điền đầy đủ thông tin bên dưới để đăng ký</p>
+                    </div>
+                    
+                    <div class="card-body p-4">
+                        <form action="#" method="POST">
+                            
+                            <!-- Họ và tên -->
+                            <div class="mb-3">
+                                <label for="fullName" class="form-label fw-semibold">Họ và tên <span class="text-danger">*</span></label>
+                                <input type="text" class="form-control" id="fullName" placeholder="Nguyễn Văn A" required>
+                            </div>
+
+                            <!-- Email -->
+                            <div class="mb-3">
+                                <label for="userEmail" class="form-label fw-semibold">Địa chỉ Email <span class="text-danger">*</span></label>
+                                <input type="email" class="form-control" id="userEmail" placeholder="example@domain.com" aria-describedby="emailHelp" required>
+                                <div id="emailHelp" class="form-text text-muted">Chúng tôi cam kết không bao giờ chia sẻ email của bạn cho bên thứ ba.</div>
+                            </div>
+
+                            <!-- Mật khẩu & Xác nhận mật khẩu -->
+                            <div class="row g-3 mb-3">
+                                <div class="col-12 col-sm-6">
+                                    <label for="userPassword" class="form-label fw-semibold">Mật khẩu <span class="text-danger">*</span></label>
+                                    <input type="password" class="form-control" id="userPassword" placeholder="••••••••" required>
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                    <label for="confirmPassword" class="form-label fw-semibold">Xác nhận mật khẩu <span class="text-danger">*</span></label>
+                                    <input type="password" class="form-control" id="confirmPassword" placeholder="••••••••" required>
+                                </div>
+                            </div>
+
+                            <!-- Giới tính (Radio buttons) -->
+                            <div class="mb-3">
+                                <label class="form-label fw-semibold d-block">Giới tính</label>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="gender" id="genderMale" value="male" checked>
+                                    <label class="form-check-label" for="genderMale">Nam</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="gender" id="genderFemale" value="female">
+                                    <label class="form-check-label" for="genderFemale">Nữ</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="gender" id="genderOther" value="other">
+                                    <label class="form-check-label" for="genderOther">Khác</label>
+                                </div>
+                            </div>
+
+                            <!-- Sở thích (Checkboxes) -->
+                            <div class="mb-3">
+                                <label class="form-label fw-semibold d-block">Sở thích</label>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" id="hobbyReading" value="reading">
+                                    <label class="form-check-label" for="hobbyReading">Đọc sách</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" id="hobbyCoding" value="coding" checked>
+                                    <label class="form-check-label" for="hobbyCoding">Lập trình</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" id="hobbySports" value="sports">
+                                    <label class="form-check-label" for="hobbySports">Thể thao</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" id="hobbyTravel" value="travel">
+                                    <label class="form-check-label" for="hobbyTravel">Du lịch</label>
+                                </div>
+                            </div>
+
+                            <!-- Quốc gia (Dropdown Select) -->
+                            <div class="mb-4Dưới đây là mã nguồn HTML hoàn chỉnh cho trang Đăng Ký sử dụng **Bootstrap 5**. Code được thiết kế chuẩn responsive (hiển thị tốt trên cả mobile và desktop), tích hợp đầy đủ các yêu cầu bài tập và có các thành phần định dạng trực quan.
+
+### Mã nguồn HTML (`index.html`)
+
+```html
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Đăng Ký Tài Khoản</title>
+    <!-- Bootstrap CSS CDN -->
+    <link href="[https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css](https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css)" rel="stylesheet">
+</head>
+<body class="bg-light">
+
+    <div class="container py-5">
+        <div class="row justify-content-center">
+            <!-- Sử dụng Grid system để form hiển thị đẹp trên cả mobile (col-12) và desktop (col-md-8, col-lg-6) -->
+            <div class="col-12 col-md-8 col-lg-6">
+                
+                <div class="card shadow-sm border-0 rounded-3">
+                    <div class="card-body p-4 p-sm-5">
+                        
+                        <!-- Tiêu đề & mô tả -->
+                        <h2 class="text-center text-primary fw-bold mb-2">Đăng Ký Tài Khoản</h2>
+                        <p class="text-center text-muted mb-4">Vui lòng điền đầy đủ thông tin bên dưới để tạo tài khoản mới.</p>
+
+                        <form action="#" method="POST">
+                            
+                            <!-- Họ và tên -->
+                            <div class="mb-3">
+                                <label for="fullName" class="form-label fw-semibold">Họ và tên</label>
+                                <input type="text" class="form-control" id="fullName" placeholder="Nguyễn Văn A" required>
+                            </div>
+
+                            <!-- Email -->
+                            <div class="mb-3">
+                                <label for="email" class="form-label fw-semibold">Địa chỉ Email</label>
+                                <input type="email" class="form-control" id="email" placeholder="example@gmail.com" required>
+                                <div class="form-text text-muted">Chúng tôi sẽ không bao giờ chia sẻ email của bạn với bất kỳ ai khác.</div>
+                            </div>
+
+                            <!-- Mật khẩu -->
+                            <div class="mb-3">
+                                <label for="password" class="form-label fw-semibold">Mật khẩu</label>
+                                <input type="password" class="form-control" id="password" placeholder="Nhập mật khẩu" required>
+                            </div>
+
+                            <!-- Xác nhận mật khẩu -->
+                            <div class="mb-3">
+                                <label for="confirmPassword" class="form-label fw-semibold">Xác nhận mật khẩu</label>
+                                <input type="password" class="form-control" id="confirmPassword" placeholder="Nhập lại mật khẩu" required>
+                            </div>
+
+                            <!-- Giới tính (Radio buttons) -->
+                            <div class="mb-3">
+                                <label class="form-label fw-semibold d-block">Giới tính</label>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="gender" id="genderMale" value="male" checked>
+                                    <label class="form-check-label" for="genderMale">Nam</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="gender" id="genderFemale" value="female">
+                                    <label class="form-check-label" for="genderFemale">Nữ</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="gender" id="genderOther" value="other">
+                                    <label class="form-check-label" for="genderOther">Khác</label>
+                                </div>
+                            </div>
+
+                            <!-- Sở thích (Checkboxes) -->
+                            <div class="mb-3">
+                                <label class="form-label fw-semibold d-block">Sở thích</label>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" id="hobbyReading" value="reading">
+                                    <label class="form-check-label" for="hobbyReading">Đọc sách</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" id="hobbySports" value="sports">
+                                    <label class="form-check-label" for="hobbySports">Thể thao</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" id="hobbyTravel" value="travel">
+                                    <label class="form-check-label" for="hobbyTravel">Du lịch</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" id="hobbyMusic" value="music">
+                                    <label class="form-check-label" for="hobbyMusic">Âm nhạc</label>
+                                </div>
+                            </div>
+
+                            <!-- Quốc gia (Dropdown Select) -->
+                            <div class="mb-4">
+                                <label for="country" class="form-label fw-semibold">Quốc gia</label>
+                                <select class="form-select" id="country" required>
+                                    <option value="" selected disabled>-- Chọn quốc gia --</option>
+                                    <option value="VN">Việt Nam</option>
+                                    <option value="US">Mỹ</option>
+                                    <option value="JP">Nhật Bản</option>
+                                    <option value="KR">Hàn Quốc</option>
+                                    <option value="SG">Singapore</option>
+                                </select>
+                            </div>
+
+                            <!-- Nút Submit -->
+                            <div class="d-grid gap-2">
+                                <button type="submit" class="btn btn-primary btn-lg">Đăng Ký</button>
+                            </div>
+
+                        </form>
+
+                    </div>
+                </div>
+
+                <!-- Footer nhỏ bên dưới form -->
+                <p class="text-center text-muted mt-3 fs-7">
+                    Đã có tài khoản? <a href="#" class="text-decoration-none">Đăng nhập ngay</a>
+                </p>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="[https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js](https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js)"></script>
+</body>
+</html>
+# 1. Di chuyển vào thư mục dự án
+cd C:/Users/ASUS/GitProject
+
+# 2. Tạo file HTML source/bootstrap_registration_form.html
+cat << 'EOF' > source/bootstrap_registration_form.html
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập: Trang Đăng Ký với Bootstrap Forms</title>
+    <!-- Nhúng Bootstrap 5 CSS CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+<body class="bg-light py-5">
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-8 col-lg-6">
+                <!-- Thẻ Card bao bọc Form đăng ký -->
+                <div class="card shadow-lg border-0 rounded-3">
+                    <div class="card-header bg-primary text-white text-center py-3">
+                        <h2 class="h4 mb-1 fw-bold">TẠO TÀI KHOẢN MỚI</h2>
+                        <p class="small mb-0 text-white-50">Vui lòng điền đầy đủ thông tin bên dưới để đăng ký</p>
+                    </div>
+                    
+                    <div class="card-body p-4">
+                        <form action="#" method="POST">
+                            
+                            <!-- Họ và tên -->
+                            <div class="mb-3">
+                                <label for="fullName" class="form-label fw-semibold">Họ và tên <span class="text-danger">*</span></label>
+                                <input type="text" class="form-control" id="fullName" placeholder="Nguyễn Văn A" required>
+                            </div>
+
+                            <!-- Email -->
+                            <div class="mb-3">
+                                <label for="userEmail" class="form-label fw-semibold">Địa chỉ Email <span class="text-danger">*</span></label>
+                                <input type="email" class="form-control" id="userEmail" placeholder="example@domain.com" aria-describedby="emailHelp" required>
+                                <div id="emailHelp" class="form-text text-muted">Chúng tôi cam kết không bao giờ chia sẻ email của bạn cho bên thứ ba.</div>
+                            </div>
+
+                            <!-- Mật khẩu & Xác nhận mật khẩu -->
+                            <div class="row g-3 mb-3">
+                                <div class="col-12 col-sm-6">
+                                    <label for="userPassword" class="form-label fw-semibold">Mật khẩu <span class="text-danger">*</span></label>
+                                    <input type="password" class="form-control" id="userPassword" placeholder="••••••••" required>
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                    <label for="confirmPassword" class="form-label fw-semibold">Xác nhận mật khẩu <span class="text-danger">*</span></label>
+                                    <input type="password" class="form-control" id="confirmPassword" placeholder="••••••••" required>
+                                </div>
+                            </div>
+
+                            <!-- Giới tính (Radio buttons) -->
+                            <div class="mb-3">
+                                <label class="form-label fw-semibold d-block">Giới tính</label>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="gender" id="genderMale" value="male" checked>
+                                    <label class="form-check-label" for="genderMale">Nam</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="gender" id="genderFemale" value="female">
+                                    <label class="form-check-label" for="genderFemale">Nữ</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="gender" id="genderOther" value="other">
+                                    <label class="form-check-label" for="genderOther">Khác</label>
+                                </div>
+                            </div>
+
+                            <!-- Sở thích (Checkboxes) -->
+                            <div class="mb-3">
+                                <label class="form-label fw-semibold d-block">Sở thích</label>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" id="hobbyReading" value="reading">
+                                    <label class="form-check-label" for="hobbyReading">Đọc sách</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" id="hobbyCoding" value="coding" checked>
+                                    <label class="form-check-label" for="hobbyCoding">Lập trình</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" id="hobbySports" value="sports">
+                                    <label class="form-check-label" for="hobbySports">Thể thao</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" id="hobbyTravel" value="travel">
+                                    <label class="form-check-label" for="hobbyTravel">Du lịch</label>
+                                </div>
+                            </div>
+
+                            <!-- Quốc gia (Dropdown Select) -->
+                            <div class="mb-4Dưới đây là mã nguồn HTML hoàn chỉnh cho trang Đăng Ký sử dụng **Bootstrap 5**. Code được thiết kế chuẩn responsive (hiển thị tốt trên cả mobile và desktop), tích hợp đầy đủ các yêu cầu bài tập và có các thành phần định dạng trực quan.
+
+### Mã nguồn HTML (`index.html`)
+
+```html
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Đăng Ký Tài Khoản</title>
+    <!-- Bootstrap CSS CDN -->
+    <link href="[https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css](https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css)" rel="stylesheet">
+</head>
+<body class="bg-light">
+
+    <div class="container py-5">
+        <div class="row justify-content-center">
+            <!-- Sử dụng Grid system để form hiển thị đẹp trên cả mobile (col-12) và desktop (col-md-8, col-lg-6) -->
+            <div class="col-12 col-md-8 col-lg-6">
+                
+                <div class="card shadow-sm border-0 rounded-3">
+                    <div class="card-body p-4 p-sm-5">
+                        
+                        <!-- Tiêu đề & mô tả -->
+                        <h2 class="text-center text-primary fw-bold mb-2">Đăng Ký Tài Khoản</h2>
+                        <p class="text-center text-muted mb-4">Vui lòng điền đầy đủ thông tin bên dưới để tạo tài khoản mới.</p>
+
+                        <form action="#" method="POST">
+                            
+                            <!-- Họ và tên -->
+                            <div class="mb-3">
+                                <label for="fullName" class="form-label fw-semibold">Họ và tên</label>
+                                <input type="text" class="form-control" id="fullName" placeholder="Nguyễn Văn A" required>
+                            </div>
+
+                            <!-- Email -->
+                            <div class="mb-3">
+                                <label for="email" class="form-label fw-semibold">Địa chỉ Email</label>
+                                <input type="email" class="form-control" id="email" placeholder="example@gmail.com" required>
+                                <div class="form-text text-muted">Chúng tôi sẽ không bao giờ chia sẻ email của bạn với bất kỳ ai khác.</div>
+                            </div>
+
+                            <!-- Mật khẩu -->
+                            <div class="mb-3">
+                                <label for="password" class="form-label fw-semibold">Mật khẩu</label>
+                                <input type="password" class="form-control" id="password" placeholder="Nhập mật khẩu" required>
+                            </div>
+
+                            <!-- Xác nhận mật khẩu -->
+                            <div class="mb-3">
+                                <label for="confirmPassword" class="form-label fw-semibold">Xác nhận mật khẩu</label>
+                                <input type="password" class="form-control" id="confirmPassword" placeholder="Nhập lại mật khẩu" required>
+                            </div>
+
+                            <!-- Giới tính (Radio buttons) -->
+                            <div class="mb-3">
+                                <label class="form-label fw-semibold d-block">Giới tính</label>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="gender" id="genderMale" value="male" checked>
+                                    <label class="form-check-label" for="genderMale">Nam</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="gender" id="genderFemale" value="female">
+                                    <label class="form-check-label" for="genderFemale">Nữ</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="gender" id="genderOther" value="other">
+                                    <label class="form-check-label" for="genderOther">Khác</label>
+                                </div>
+                            </div>
+
+                            <!-- Sở thích (Checkboxes) -->
+                            <div class="mb-3">
+                                <label class="form-label fw-semibold d-block">Sở thích</label>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" id="hobbyReading" value="reading">
+                                    <label class="form-check-label" for="hobbyReading">Đọc sách</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" id="hobbySports" value="sports">
+                                    <label class="form-check-label" for="hobbySports">Thể thao</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" id="hobbyTravel" value="travel">
+                                    <label class="form-check-label" for="hobbyTravel">Du lịch</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" id="hobbyMusic" value="music">
+                                    <label class="form-check-label" for="hobbyMusic">Âm nhạc</label>
+                                </div>
+                            </div>
+
+                            <!-- Quốc gia (Dropdown Select) -->
+                            <div class="mb-4">
+                                <label for="country" class="form-label fw-semibold">Quốc gia</label>
+                                <select class="form-select" id="country" required>
+                                    <option value="" selected disabled>-- Chọn quốc gia --</option>
+                                    <option value="VN">Việt Nam</option>
+                                    <option value="US">Mỹ</option>
+                                    <option value="JP">Nhật Bản</option>
+                                    <option value="KR">Hàn Quốc</option>
+                                    <option value="SG">Singapore</option>
+                                </select>
+                            </div>
+
+                            <!-- Nút Submit -->
+                            <div class="d-grid gap-2">
+                                <button type="submit" class="btn btn-primary btn-lg">Đăng Ký</button>
+                            </div>
+
+                        </form>
+
+                    </div>
+                </div>
+
+                <!-- Footer nhỏ bên dưới form -->
+                <p class="text-center text-muted mt-3 fs-7">
+                    Đã có tài khoản? <a href="#" class="text-decoration-none">Đăng nhập ngay</a>
+                </p>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="[https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js](https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js)"></script>
+</body>
+</html>
+# 1. Di chuyển vào thư mục dự án
+cd C:/Users/ASUS/GitProject
+
+# 2. Tạo file HTML source/bootstrap_registration_form.html
+cat << 'EOF' > source/bootstrap_registration_form.html
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập: Trang Đăng Ký với Bootstrap Forms</title>
+    <!-- Nhúng Bootstrap 5 CSS CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+<body class="bg-light py-5">
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-8 col-lg-6">
+                <!-- Thẻ Card bao bọc Form đăng ký -->
+                <div class="card shadow-lg border-0 rounded-3">
+                    <div class="card-header bg-primary text-white text-center py-3">
+                        <h2 class="h4 mb-1 fw-bold">TẠO TÀI KHOẢN MỚI</h2>
+                        <p class="small mb-0 text-white-50">Vui lòng điền đầy đủ thông tin bên dưới để đăng ký</p>
+                    </div>
+                    
+                    <div class="card-body p-4">
+                        <form action="#" method="POST">
+                            
+                            <!-- Họ và tên -->
+                            <div class="mb-3">
+                                <label for="fullName" class="form-label fw-semibold">Họ và tên <span class="text-danger">*</span></label>
+                                <input type="text" class="form-control" id="fullName" placeholder="Nguyễn Văn A" required>
+                            </div>
+
+                            <!-- Email -->
+                            <div class="mb-3">
+                                <label for="userEmail" class="form-label fw-semibold">Địa chỉ Email <span class="text-danger">*</span></label>
+                                <input type="email" class="form-control" id="userEmail" placeholder="example@domain.com" aria-describedby="emailHelp" required>
+                                <div id="emailHelp" class="form-text text-muted">Chúng tôi cam kết không bao giờ chia sẻ email của bạn cho bên thứ ba.</div>
+                            </div>
+
+                            <!-- Mật khẩu & Xác nhận mật khẩu -->
+                            <div class="row g-3 mb-3">
+                                <div class="col-12 col-sm-6">
+                                    <label for="userPassword" class="form-label fw-semibold">Mật khẩu <span class="text-danger">*</span></label>
+                                    <input type="password" class="form-control" id="userPassword" placeholder="••••••••" required>
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                    <label for="confirmPassword" class="form-label fw-semibold">Xác nhận mật khẩu <span class="text-danger">*</span></label>
+                                    <input type="password" class="form-control" id="confirmPassword" placeholder="••••••••" required>
+                                </div>
+                            </div>
+
+                            <!-- Giới tính (Radio buttons) -->
+                            <div class="mb-3">
+                                <label class="form-label fw-semibold d-block">Giới tính</label>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="gender" id="genderMale" value="male" checked>
+                                    <label class="form-check-label" for="genderMale">Nam</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="gender" id="genderFemale" value="female">
+                                    <label class="form-check-label" for="genderFemale">Nữ</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="gender" id="genderOther" value="other">
+                                    <label class="form-check-label" for="genderOther">Khác</label>
+                                </div>
+                            </div>
+
+                            <!-- Sở thích (Checkboxes) -->
+                            <div class="mb-3">
+                                <label class="form-label fw-semibold d-block">Sở thích</label>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" id="hobbyReading" value="reading">
+                                    <label class="form-check-label" for="hobbyReading">Đọc sách</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" id="hobbyCoding" value="coding" checked>
+                                    <label class="form-check-label" for="hobbyCoding">Lập trình</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" id="hobbySports" value="sports">
+                                    <label class="form-check-label" for="hobbySports">Thể thao</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" id="hobbyTravel" value="travel">
+                                    <label class="form-check-label" for="hobbyTravel">Du lịch</label>
+                                </div>
+                            </div>
+
+                            <!-- Quốc gia (Dropdown Select) -->
+                            <div class="mb-4Dưới đây là mã nguồn HTML hoàn chỉnh cho trang Đăng Ký sử dụng **Bootstrap 5**. Code được thiết kế chuẩn responsive (hiển thị tốt trên cả mobile và desktop), tích hợp đầy đủ các yêu cầu bài tập và có các thành phần định dạng trực quan.
+
+### Mã nguồn HTML (`index.html`)
+
+```html
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Đăng Ký Tài Khoản</title>
+    <!-- Bootstrap CSS CDN -->
+    <link href="[https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css](https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css)" rel="stylesheet">
+</head>
+<body class="bg-light">
+
+    <div class="container py-5">
+        <div class="row justify-content-center">
+            <!-- Sử dụng Grid system để form hiển thị đẹp trên cả mobile (col-12) và desktop (col-md-8, col-lg-6) -->
+            <div class="col-12 col-md-8 col-lg-6">
+                
+                <div class="card shadow-sm border-0 rounded-3">
+                    <div class="card-body p-4 p-sm-5">
+                        
+                        <!-- Tiêu đề & mô tả -->
+                        <h2 class="text-center text-primary fw-bold mb-2">Đăng Ký Tài Khoản</h2>
+                        <p class="text-center text-muted mb-4">Vui lòng điền đầy đủ thông tin bên dưới để tạo tài khoản mới.</p>
+
+                        <form action="#" method="POST">
+                            
+                            <!-- Họ và tên -->
+                            <div class="mb-3">
+                                <label for="fullName" class="form-label fw-semibold">Họ và tên</label>
+                                <input type="text" class="form-control" id="fullName" placeholder="Nguyễn Văn A" required>
+                            </div>
+
+                            <!-- Email -->
+                            <div class="mb-3">
+                                <label for="email" class="form-label fw-semibold">Địa chỉ Email</label>
+                                <input type="email" class="form-control" id="email" placeholder="example@gmail.com" required>
+                                <div class="form-text text-muted">Chúng tôi sẽ không bao giờ chia sẻ email của bạn với bất kỳ ai khác.</div>
+                            </div>
+
+                            <!-- Mật khẩu -->
+                            <div class="mb-3">
+                                <label for="password" class="form-label fw-semibold">Mật khẩu</label>
+                                <input type="password" class="form-control" id="password" placeholder="Nhập mật khẩu" required>
+                            </div>
+
+                            <!-- Xác nhận mật khẩu -->
+                            <div class="mb-3">
+                                <label for="confirmPassword" class="form-label fw-semibold">Xác nhận mật khẩu</label>
+                                <input type="password" class="form-control" id="confirmPassword" placeholder="Nhập lại mật khẩu" required>
+                            </div>
+
+                            <!-- Giới tính (Radio buttons) -->
+                            <div class="mb-3">
+                                <label class="form-label fw-semibold d-block">Giới tính</label>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="gender" id="genderMale" value="male" checked>
+                                    <label class="form-check-label" for="genderMale">Nam</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="gender" id="genderFemale" value="female">
+                                    <label class="form-check-label" for="genderFemale">Nữ</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="gender" id="genderOther" value="other">
+                                    <label class="form-check-label" for="genderOther">Khác</label>
+                                </div>
+                            </div>
+
+                            <!-- Sở thích (Checkboxes) -->
+                            <div class="mb-3">
+                                <label class="form-label fw-semibold d-block">Sở thích</label>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" id="hobbyReading" value="reading">
+                                    <label class="form-check-label" for="hobbyReading">Đọc sách</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" id="hobbySports" value="sports">
+                                    <label class="form-check-label" for="hobbySports">Thể thao</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" id="hobbyTravel" value="travel">
+                                    <label class="form-check-label" for="hobbyTravel">Du lịch</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" id="hobbyMusic" value="music">
+                                    <label class="form-check-label" for="hobbyMusic">Âm nhạc</label>
+                                </div>
+                            </div>
+
+                            <!-- Quốc gia (Dropdown Select) -->
+                            <div class="mb-4">
+                                <label for="country" class="form-label fw-semibold">Quốc gia</label>
+                                <select class="form-select" id="country" required>
+                                    <option value="" selected disabled>-- Chọn quốc gia --</option>
+                                    <option value="VN">Việt Nam</option>
+                                    <option value="US">Mỹ</option>
+                                    <option value="JP">Nhật Bản</option>
+                                    <option value="KR">Hàn Quốc</option>
+                                    <option value="SG">Singapore</option>
+                                </select>
+                            </div>
+
+                            <!-- Nút Submit -->
+                            <div class="d-grid gap-2">
+                                <button type="submit" class="btn btn-primary btn-lg">Đăng Ký</button>
+                            </div>
+
+                        </form>
+
+                    </div>
+                </div>
+
+                <!-- Footer nhỏ bên dưới form -->
+                <p class="text-center text-muted mt-3 fs-7">
+                    Đã có tài khoản? <a href="#" class="text-decoration-none">Đăng nhập ngay</a>
+                </p>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="[https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js](https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js)"></script>
+</body>
+</html>
+# 1. Di chuyển vào thư mục dự án của bạn
+cd C:/Users/ASUS/GitProject
+
+# 2. Tạo file HTML source/bootstrap_registration_form.html với đầy đủ các thành phần Form
+cat << 'EOF' > source/bootstrap_registration_form.html
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập: Trang Đăng Ký với Bootstrap Forms</title>
+    <!-- Nhúng Bootstrap 5 CSS CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+<body class="bg-light py-5">
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <!-- Grid responsive: Màn hình nhỏ chiếm col-12, Medium chiếm col-8, Large chiếm col-6 -->
+            <div class="col-12 col-md-8 col-lg-6">
+                
+                <!-- Thẻ Card bao bọc form đăng ký -->
+                <div class="card shadow-lg border-0 rounded-3">
+                    <div class="card-header bg-primary text-white text-center py-3">
+                        <h2 class="h4 mb-1 fw-bold">TẠO TÀI KHOẢN MỚI</h2>
+                        <p class="small mb-0 text-white-50">Vui lòng điền đầy đủ thông tin bên dưới để đăng ký</p>
+                    </div>
+                    
+                    <div class="card-body p-4">
+                        <form action="#" method="POST">
+                            
+                            <!-- 1. Họ và tên (Input text) -->
+                            <div class="mb-3">
+                                <label for="fullName" class="form-label fw-semibold">Họ và tên <span class="text-danger">*</span></label>
+                                <input type="text" class="form-control" id="fullName" placeholder="Nguyễn Văn A" required>
+                            </div>
+
+                            <!-- 2. Email (Input email) -->
+                            <div class="mb-3">
+                                <label for="userEmail" class="form-label fw-semibold">Địa chỉ Email <span class="text-danger">*</span></label>
+                                <input type="email" class="form-control" id="userEmail" placeholder="example@domain.com" aria-describedby="emailHelp" required>
+                                <div id="emailHelp" class="form-text text-muted">Chúng tôi cam kết giữ kín thông tin email của bạn.</div>
+                            </div>
+
+                            <!-- 3 & 4. Mật khẩu & Xác nhận mật khẩu (Input password) -->
+                            <div class="row g-3 mb-3">
+                                <div class="col-12 col-sm-6">
+                                    <label for="userPassword" class="form-label fw-semibold">Mật khẩu <span class="text-danger">*</span></label>
+                                    <input type="password" class="form-control" id="userPassword" placeholder="••••••••" required>
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                    <label for="confirmPassword" class="form-label fw-semibold">Xác nhận mật khẩu <span class="text-danger">*</span></label>
+                                    <input type="password" class="form-control" id="confirmPassword" placeholder="••••••••" required>
+                                </div>
+                            </div>
+
+                            <!-- 5. Giới tính (Radio buttons) -->
+                            <div class="mb-3">
+                                <label class="form-label fw-semibold d-block">Giới tính</label>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="gender" id="genderMale" value="male" checked>
+                                    <label class="form-check-label" for="genderMale">Nam</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="gender" id="genderFemale" value="female">
+                                    <label class="form-check-label" for="genderFemale">Nữ</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="gender" id="genderOther" value="other">
+                                    <label class="form-check-label" for="genderOther">Khác</label>
+                                </div>
+                            </div>
+
+                            <!-- 6. Sở thích (Checkboxes) -->
+                            <div class="mb-3">
+                                <label class="form-label fw-semibold d-block">Sở thích</label>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" id="hobbyReading" value="reading">
+                                    <label class="form-check-label" for="hobbyReading">Đọc sách</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" id="hobbyCoding" value="coding" checked>
+                                    <label class="form-check-label" for="hobbyCoding">Lập trình</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" id="hobbySports" value="sports">
+                                    <label class="form-check-label" for="hobbySports">Thể thao</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" id="hobbyTravel" value="travel">
+                                    <label class="form-check-label" for="hobbyTravel">Du lịch</label>
+                                </div>
+                            </div>
+
+                            <!-- 7. Quốc gia (Dropdown Select) -->
+                            <div class="mb-4">
+                                <label for="countrySelect" class="form-label fw-semibold">Quốc gia <span class="text-danger">*</span></label>
+                                <select class="form-select" id="countrySelect" required>
+                                    <option value="" disabled selected>-- Chọn quốc gia --</option>
+                                    <option value="VN">Việt Nam</option>
+                                    <option value="US">Hoa Kỳ</option>
+                                    <option value="JP">Nhật Bản</option>
+                                    <option value="KR">Hàn Quốc</option>
+                                    <option value="SG">Singapore</option>
+                                </select>
+                            </div>
+
+                            <!-- 8. Nút Submit (btn-primary full-width) -->
+                            <div class="d-grid gap-2">
+                                <button type="submit" class="btn btn-primary btn-lg fw-bold">ĐĂNG KÝ NGAY</button>
+                            </div>
+
+                        </form>
+                    </div>
+                    
+                    <div class="card-footer text-center py-3 bg-light">
+                        <small class="text-muted">Đã có tài khoản? <a href="#" class="text-decoration-none">Đăng nhập tại đây</a></small>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Nhúng Bootstrap 5 JS Bundle CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
