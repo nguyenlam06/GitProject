@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Thực hành: Tạo Layout trong Bootstrap</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="poly.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container" style="height: auto">
+    
+    <header class="row">
+        <div class="shopping-mall">
+            <h1>Online shopping mall</h1>
+            <h5>The center point of the professional programming</h5>
+        </div>
+        <img class="pull-right img-responsive" src="https://via.placeholder.com/150x90/337ab7/ffffff?text=Mall+Logo" alt="Header Object" style="margin-top: 10px; margin-right: 15px;" />
+    </header>
+
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#"><span class="glyphicon glyphicon-home"></span> Trang chủ</a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li><a href="#"><span class="glyphicon glyphicon-list-alt"></span> Giới thiệu</a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-earphone"></span> Liên hệ</a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-envelope"></span> Góp ý</a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-question-sign"></span> Hỏi đáp</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"><span class="glyphicon glyphicon-user"></span> Tài khoản <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Đăng nhập</a></li>
+                            <li><a href="#">Đăng ký</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">Quên mật khẩu</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="row">
+        
+        <article class="col-sm-9">
+            <div class="row">
+                <div class="col-sm-4 poly-prod">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">Nokia Lumia</h4>
+                        </div>
+                        <div class="panel-body">
+                            <img src="https://picsum.photos/300/200?random=1" class="img-responsive center-block" alt="Nokia" />
+                        </div>
+                        <div class="panel-footer fw-bold text-danger">
+                            $ 100.25
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-4 poly-prod">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">Samsung Galaxy</h4>
+                        </div>
+                        <div class="panel-body">
+                            <img src="https://picsum.photos/300/200?random=2" class="img-responsive center-block" alt="Samsung" />
+                        </div>
+                        <div class="panel-footer fw-bold text-danger">
+                            $ 250.00
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-4 poly-prod">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">iPhone 15</h4>
+                        </div>
+                        <div class="panel-body">
+                            <img src="https://picsum.photos/300/200?random=3" class="img-responsive center-block" alt="iPhone" />
+                        </div>
+                        <div class="panel-footer fw-bold text-danger">
+                            $ 999.99
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-4 poly-prod">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">Laptop Dell XPS</h4>
+                        </div>
+                        <div class="panel-body">
+                            <img src="https://picsum.photos/300/200?random=4" class="img-responsive center-block" alt="Dell XPS" />
+                        </div>
+                        <div class="panel-footer fw-bold text-danger">
+                            $ 750.50
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-4 poly-prod">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">MacBook Pro</h4>
+                        </div>
+                        <div class="panel-body">
+                            <img src="https://picsum.photos/300/200?random=5" class="img-responsive center-block" alt="MacBook" />
+                        </div>
+                        <div class="panel-footer fw-bold text-danger">
+                            $ 1200.00
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-4 poly-prod">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">iPad Air</h4>
+                        </div>
+                        <div class="panel-body">
+                            <img src="https://picsum.photos/300/200?random=6" class="img-responsive center-block" alt="iPad" />
+                        </div>
+                        <div class="panel-footer fw-bold text-danger">
+                            $ 499.00
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <aside class="col-sm-3">
+            <div class="poly-cart">
+                <div class="panel panel-default">
+                    <div class="panel-body row">
+                        <div class="col-xs-5 col-sm-5">
+                            <span class="glyphicon glyphicon-shopping-cart text-primary" style="font-size: 45px;"></span>
+                        </div>
+                        <ul class="col-xs-7 col-sm-7">
+                            <li>100 items</li>
+                            <li>$56.8</li>
+                            <li><a href="#">Xem giỏ hàng</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <form>
+                        <input placeholder="Keywords" class="form-control" />
+                    </form>
+                </div>
+            </div>
+
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <span class="glyphicon glyphicon-th-list"></span>
+                    <strong>Chủng Loại</strong>
+                </div>
+                <div class="list-group">
+                    <a href="#" class="list-group-item">Điện thoại di động</a>
+                    <a href="#" class="list-group-item">Máy tính xách tay</a>
+                    <a href="#" class="list-group-item">Máy tính để bàn</a>
+                    <a href="#" class="list-group-item">Quạt máy</a>
+                    <a href="#" class="list-group-item">Tivi</a>
+                    <a href="#" class="list-group-item">Tủ lạnh</a>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+    <footer class="panel panel-default" style="margin-top: 15px;">
+        <div class="panel-heading text-center">
+            <p style="margin: 0;">CodeGym &copy; 2026</p>
+        </div>
+    </footer>
+
+</div>
+</body>
+</html>
