@@ -1,0 +1,48 @@
+/* Reset tính toán kích thước bao gồm cả padding & border */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    padding: 20px;
+}
+
+h1 {
+    color: #2c3e50;
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+/* Khối chứa container */
+.container {
+    width: 100%;
+    overflow: hidden;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+/* Cột bên trái: Chiếm 60% */
+.left-column {
+    width: 60%;
+    float: left;
+    background-color: lightblue;
+    padding: 20px;
+}
+
+/* Cột bên phải: Chiếm 38% */
+.right-column {
+    width: 38%;
+    float: right;
+    background-color: lightgreen;
+    padding: 20px;
+}
+
+/* Kỹ thuật Clearfix giải quyết vấn đề trôi bố cục khi dùng float */
+.container::after {
+    content: "";
+    display: block;
+    clear: both;
+}
