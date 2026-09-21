@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thực hành Sử dụng Box Model 1</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            padding: 20px;
+        }
+
+        /* Định dạng khối div theo đúng đề bài thực hành Box Model */
+        div.box-demo {
+            margin: 25px;
+            padding: 35px;
+            width: 200px;
+            background-color: lightseagreen;
+            border: 20px dashed indianred;
+        }
+
+        .explanation {
+            margin-top: 30px;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            max-width: 600px;
+        }
+
+        .formula {
+            background-color: #f8f9fa;
+            border-left: 4px solid #3498db;
+            padding: 10px 15px;
+            font-family: monospace;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>[Thực hành] Sử dụng Box Model 1</h1>
+
+    <!-- Khối div demo Box Model -->
+    <div class="box-demo">
+        Content demo box<br/>
+    </div>
+
+    <!-- Giải thích chi tiết tính toán Box Model -->
+    <div class="explanation">
+        <h3>Giải thích công thức tính tổng chiều rộng (Total Width):</h3>
+        <p>Theo mặc định trong CSS (box-sizing: content-box), tổng chiều rộng của phần tử <code>div</code> được tính như sau:</p>
+        
+        <div class="formula">
+            Total Width = width + padding (left + right) + border (left + right) + margin (left + right)<br><br>
+            = 200px + (35px + 35px) + (20px + 20px) + (25px + 25px)<br>
+            = 200px + 70px + 40px + 50px<br>
+            = <strong>360px</strong>
+        </div>
+    </div>
+
+</body>
+</html>
