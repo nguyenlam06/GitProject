@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Thực hành Bảng trong CSS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 30px;
+            background-color: #f8f9fa;
+        }
+        h2 {
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 5px;
+            margin-top: 30px;
+        }
+
+        /* 1. Bảng có đường viền đôi (Mặc định) */
+        table.double-border, table.double-border th, table.double-border td {
+            border: 1px solid black;
+        }
+
+        /* 2. Bảng gộp đường viền (border-collapse), Kích thước, Căn chỉnh & Màu sắc */
+        table.styled-table {
+            border-collapse: collapse; /* Bỏ đường viền đôi */
+            width: 100%;               /* Thiết lập chiều rộng 100% */
+            background-color: #ffffff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        table.styled-table th, table.styled-table td {
+            border: 1px solid #ddd;   /* Màu đường viền nhẹ nhàng */
+            padding: 12px 15px;       /* Khoảng cách giữa đường viền và nội dung (Padding) */
+        }
+
+        table.styled-table th {
+            height: 50px;              /* Thiết lập chiều cao cho <th> */
+            background-color: #4CAF50; /* Màu nền header */
+            color: white;              /* Màu chữ header */
+            text-align: left;          /* Căn chỉnh lề trái theo chiều ngang */
+        }
+
+        table.styled-table td {
+            vertical-align: bottom;    /* Căn chỉnh nội dung xuống dưới theo chiều dọc */
+            height: 40px;
+        }
+
+        /* Xen kẽ màu nền cho các dòng trong bảng */
+        table.styled-table tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        /* Hiệu ứng rê chuột qua dòng */
+        table.styled-table tr:hover {
+            background-color: #ddd;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Thực Hành Định Kiểu Bảng (Table) Bằng CSS</h1>
+
+    <h2>1. Bảng với đường viền mặc định (Đường viền đôi)</h2>
+    <table class="double-border">
+        <tr>
+            <th>Họ và Tên</th>
+            <th>Email</th>
+        </tr>
+        <tr>
+            <td>Nguyễn Văn A</td>
+            <td>anguyen@example.com</td>
+        </tr>
+    </table>
+
+    <h2>2. Bảng CSS hoàn chỉnh (border-collapse, width, padding, text-align, vertical-align, màu sắc)</h2>
+    <table class="styled-table">
+        <thead>
+            <tr>
+                <th>STT</th>
+                <th>Tên nhân viên</th>
+                <th>Chức vụ</th>
+                <th>Mức lương</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Trần Thị B</td>
+                <td>Lập trình viên Front-end</td>
+                <td>15.000.000 VNĐ</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Lê Văn C</td>
+                <td>Chuyên viên QC/Tester</td>
+                <td>12.500.000 VNĐ</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Phạm Đăng D</td>
+                <td>Quản lý Dự án (PM)</td>
+                <td>25.000.000 VNĐ</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>
