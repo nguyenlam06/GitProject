@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nhúng CSS vào trang HTML</title>
+    
+    <!-- Nhúng External Style từ file embed_css.css -->
+    <link rel="stylesheet" href="embed_css.css">
+
+    <!-- Phần 2: Sử dụng Internal Style trong thẻ <style> -->
+    <style>
+        .internal-heading {
+            color: #e74c3c; /* Màu đỏ */
+        }
+        .internal-paragraph {
+            color: #27ae60; /* Màu xanh lá */
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Bài Tập: Các Cách Nhúng CSS Vào Trang HTML</h1>
+
+    <hr>
+
+    <!-- Phần 1: Inline Style (Nhúng trực tiếp vào thuộc tính style) -->
+    <h2>Phần 1: Inline Style (Nhúng trực tiếp trong thuộc tính style)</h2>
+    <h3 style="color: #2980b9;">Tiêu đề sử dụng Inline CSS (Màu xanh dương)</h3>
+    <p style="color: #e67e22; font-style: italic;">
+        Đoạn văn này được định dạng bằng Inline CSS với thuộc tính style trực tiếp trong thẻ html.
+    </p>
+
+    <hr>
+
+    <!-- Phần 2: Internal Style (Nhúng trong thẻ <style> ở phần <head>) -->
+    <h2>Phần 2: Internal Style (Viết trong thẻ &lt;style&gt; ở &lt;head&gt;)</h2>
+    <h3 class="internal-heading">Tiêu đề sử dụng Internal CSS (Màu đỏ)</h3>
+    <p class="internal-paragraph">
+        Đoạn văn này được định dạng màu sắc bằng Internal CSS khai báo ở phần head.
+    </p>
+
+    <hr>
+
+    <!-- Phần 3: External Style (Nhúng file CSS bên ngoài) -->
+    <h2>Phần 3: External Style (Nhúng từ file CSS bên ngoài)</h2>
+    <h3 class="external-style">Tiêu đề sử dụng External CSS (Màu tím)</h3>
+    <p class="external-style">
+        Đoạn văn này sử dụng lớp class khai báo trong tệp embed_css.css riêng biệt.
+    </p>
+
+</body>
+</html>

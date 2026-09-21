@@ -1,0 +1,5 @@
+/* Phần 3: Thay đổi màu sắc văn bản sử dụng External Style */
+.external-style {
+    color: #9b59b6; /* Màu tím */
+    font-weight: bold;
+}
