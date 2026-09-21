@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Lịch Họp Công Ty</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 30px;
+            background-color: #f9f9f9;
+        }
+        h1 {
+            color: #333;
+        }
+        table {
+            width: 100%;
+            max-width: 700px;
+            border-collapse: collapse;
+            background-color: #fff;
+            box-shadow: 0 0 5px rgba(0,0,0,0.1);
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: center;
+        }
+        th {
+            background-color: #2196F3;
+            color: white;
+        }
+        .content-cell {
+            text-align: left;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Lịch họp công ty</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Ngày</th>
+                <th>Giờ</th>
+                <th>Nội dung cuộc họp</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Ngày thứ Hai dùng rowspan=2 vì có 2 cuộc họp -->
+            <tr>
+                <td rowspan="2"><b>Thứ Hai<br>(22/09)</b></td>
+                <td>08:00 - 09:30</td>
+                <td class="content-cell">Họp giao ban đầu tuần toàn công ty</td>
+            </tr>
+            <tr>
+                <td>10:00 - 11:30</td>
+                <td class="content-cell">Họp nhóm Phòng Kỹ thuật & Dev</td>
+            </tr>
+
+            <!-- Ngày thứ Ba dùng colspan=2 cho cuộc họp kéo dài cả buổi -->
+            <tr>
+                <td><b>Thứ Ba<br>(23/09)</b></td>
+                <td colspan="2" class="content-cell" style="text-align: center; background-color: #e8f5e9;">
+                    <b>08:00 - 17:00:</b> Tập huấn quy trình làm việc mới (Cả ngày)
+                </td>
+            </tr>
+
+            <!-- Ngày thứ Tư dùng rowspan=2 -->
+            <tr>
+                <td rowspan="2"><b>Thứ Tư<br>(24/09)</b></td>
+                <td>09:00 - 11:00</td>
+                <td class="content-cell">Họp báo cáo tiến độ dự án Website</td>
+            </tr>
+            <tr>
+                <td>14:00 - 16:00</td>
+                <td class="content-cell">Gặp gỡ đối tác khảo sát khách hàng</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>
