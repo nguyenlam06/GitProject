@@ -1,0 +1,143 @@
+/* Reset tính toán kích thước bao gồm padding & border */
+* {
+    box-sizing: border-box;
+}
+
+/* 1. Bộ chọn body cố định phông chữ cho cả trang */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 20px 0;
+}
+
+/* 1. Bộ chọn #main cố định độ rộng và căn giữa màn hình */
+#main {
+    width: 960px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* 2. Bộ chọn #head xác định chiều cao, màu nền, đường viền và margin-bottom */
+#head {
+    height: 100px;
+    background-color: #2c3e50;
+    color: #ffffff;
+    border-bottom: 2px solid #1a252f;
+    margin-bottom: 5px;
+    padding: 20px;
+    text-align: center;
+}
+
+#head h1 {
+    margin: 0;
+    font-size: 28px;
+}
+
+/* 4. Bộ chọn #head-link xác định vùng đặt các liên kết đầu trang */
+#head-link {
+    height: 35px;
+    background-color: #34495e;
+    color: #ffffff;
+    line-height: 35px;
+    padding-left: 15px;
+    margin-bottom: 10px;
+}
+
+#head-link a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0 8px;
+}
+
+#head-link a:hover {
+    color: #f1c40f;
+}
+
+/* 6. Bộ chọn #left xác định vùng cho nội dung bên trái với float: left */
+#left {
+    width: 200px;
+    min-height: 400px;
+    float: left;
+    background-color: #eef2f5;
+    border: 1px solid #dcdcdc;
+    margin-right: 10px;
+    padding: 15px;
+}
+
+#left h3 {
+    margin-top: 0;
+    color: #2c3e50;
+    font-size: 16px;
+    border-bottom: 2px solid #34495e;
+    padding-bottom: 5px;
+}
+
+#left ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#left ul li {
+    margin-bottom: 8px;
+}
+
+#left ul li a {
+    color: #333;
+    text-decoration: none;
+}
+
+/* 8. Bộ chọn #content cho vùng nội dung ở giữa */
+#content {
+    width: 530px;
+    min-height: 400px;
+    float: left;
+    background-color: #ffffff;
+    border: 1px solid #dcdcdc;
+    margin-right: 10px;
+    padding: 15px;
+}
+
+#content h2 {
+    margin-top: 0;
+    color: #2980b9;
+    font-size: 20px;
+}
+
+/* 8. Bộ chọn #right cho vùng thông tin bên phải */
+#right {
+    width: 208px;
+    min-height: 400px;
+    float: left;
+    background-color: #eef2f5;
+    border: 1px solid #dcdcdc;
+    padding: 15px;
+}
+
+#right h3 {
+    margin-top: 0;
+    color: #2c3e50;
+    font-size: 16px;
+    border-bottom: 2px solid #34495e;
+    padding-bottom: 5px;
+}
+
+/* 10. Bộ chọn #footer cho phân vùng cuối trang có clear: both */
+#footer {
+    clear: both;
+    height: 50px;
+    background-color: #2c3e50;
+    color: #ffffff;
+    text-align: center;
+    line-height: 50px;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+#footer p {
+    margin: 0;
+}
