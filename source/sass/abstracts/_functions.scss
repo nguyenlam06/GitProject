@@ -1,0 +1,4 @@
+// Khai báo hàm tự định nghĩa
+@function px-to-rem($px) {
+  @return ($px / 16px) * 1rem;
+}

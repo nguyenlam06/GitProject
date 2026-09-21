@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài đọc: Cấu trúc thư mục SASS 7-1 Pattern</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; padding: 30px; background: #f8f9fa; color: #333; max-width: 900px; margin: auto; }
+        h1 { color: #d81b60; border-bottom: 2px solid #d81b60; padding-bottom: 10px; }
+        h2 { color: #007bff; margin-top: 20px; }
+        pre { background: #272822; color: #f8f8f2; padding: 15px; border-radius: 6px; overflow-x: auto; font-size: 0.95rem; }
+        ul { margin-left: 20px; }
+        li { margin-bottom: 8px; }
+        .box { background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.08); margin-bottom: 20px; }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h1>Cách Tổ Chức Thư Mục & File SASS (7-1 Pattern)</h1>
+        <p>Thư mục <code>source/sass/</code> của dự án đã được khởi tạo tự động theo đúng mô hình chuẩn <strong>7-1 Pattern</strong>.</p>
+        
+        <h2>📁 Cấu trúc thư mục đã tạo:</h2>
+        <pre>
+📂 source/sass/
+├── 📄 main.scss         # File chính (Import tất cả các file con)
+├── 📂 abstracts/        # _variables.scss, _mixins.scss, _functions.scss
+├── 📂 base/             # _reset.scss, _typography.scss, _global.scss
+├── 📂 layout/           # _header.scss, _footer.scss, _grid.scss
+├── 📂 components/       # _buttons.scss, _cards.scss
+├── 📂 pages/            # _home.scss
+├── 📂 themes/           # _dark.scss
+└── 📂 vendors/          # _bootstrap.scss
+        </pre>
+
+        <h2>💡 Lợi ích chính:</h2>
+        <ul>
+            <li><strong>Dễ bảo trì:</strong> Mỗi quy tắc CSS nằm ở một vị trí rõ ràng, dễ tìm kiếm.</li>
+            <li><strong>Tái sử dụng cao:</strong> Quản lý biến và mixin tập trung tại <code>abstracts/</code>.</li>
+            <li><strong>Tối ưu biên dịch:</strong> Chỉ biên dịch 1 file <code>main.scss</code> duy nhất ra CSS.</li>
+        </ul>
+    </div>
+</body>
+</html>
