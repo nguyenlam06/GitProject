@@ -1,69 +1,158 @@
-/* Resetbox-sizing để kích thước padding không làm tăng tổng độ rộng */
-* {
-    box-sizing: border-box;
-}
+# 2. Tạo file HTML source/display_inline_block.htmltăng tổng độ rộng */
+cat << 'EOF' > source/display_inline_block.html
+<!DOCTYPE html> border-box;
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bố cục với display</title>
+    <link rel="stylesheet" href="display_inline_block.css">
+</head>ding: 20px;
+<body>ckground-color: #f8f9fa;
+    <h1>Bố cục trang web với display</h1>
 
-body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    margin: 0;
-    padding: 20px;
-    background-color: #f8f9fa;
-}
+    <nav>
+        <a href="#">Trang chủ</a>
+        <a href="#">Giới thiệu</a>
+        <a href="#">Dịch vụ</a>
+        <a href="#">Liên hệ</a>
+    </nav>iều hướng navigation */
+    {
+    <section>d-color: #ffffff;
+        <div class="box">Cột 1</div>
+        <div class="box">Cột 2</div>
+        <div class="box">Cột 3</div>,0.05);
+    </section>tom: 20px;
 
-h1 {
-    color: #2c3e50;
-    margin-bottom: 20px;
-}
+    <footer>
+        <p>Bản quyền &copy; 2026</p>
+git push origin mainisplay_inline_block.html and display_inline_block.css"/li></li>)</a></li>>/li>)</a>
+warning: in the working copy of 'source/index.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'source/display_inline_block.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'source/display_inline_block.html', LF will be replaced by CRLF the next time Git touches it
+[main 07688b3] Add display_inline_block.html and display_inline_block.css
+ 3 files changed, 99 insertions(+)
+ create mode 100644 source/display_inline_block.css
+ create mode 100644 source/display_inline_block.html
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 1.53 KiB | 1.53 MiB/s, done.
+Total 6 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/nguyenlam06/GitProject.git
+   c826025..07688b3  main -> main
 
-/* Thanh điều hướng navigation */
-nav {
-    background-color: #ffffff;
-    padding: 15px;
-    border-radius: 6px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-    margin-bottom: 20px;
-}
+ASUS@LAPTOP-RKMC2OE6 MINGW64 ~/GitProject (main)
+$ # 1. Di chuyển vào thư mục dự án
+cd C:/Users/ASUS/GitProject
 
-nav a {
-    display: inline-block;
-    margin: 0 15px;
-    text-decoration: none;
-    color: #333333;
-    font-weight: bold;
-    padding: 8px 12px;
-    transition: background-color 0.3s ease;
-}
+# 2. Tạo file HTML source/overflow_float_exercise.html
+cat << 'EOF' > source/overflow_float_exercise.html
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bố cục với Float và Overflow</title>
+    <link rel="stylesheet" href="overflow_float_exercise.css">
+</head>
+<body>
+    <h1>Bố cục trang với float và overflow</h1>
 
-nav a:hover {
-    background-color: #e2e8f0;
-    border-radius: 4px;
-    color: #2980b9;
-}
+    <div class="container">
+        <div class="left-column">
+            <h2>Nội dung bên trái</h2>
+            <p>Cột này chiếm 50% độ rộng và sử dụng <code>float: left</code>.</p>
+        </div>
+        <div class="right-column">
+            <h2>Nội dung bên phải</h2>
+            <p>Cột này chiếm 48% độ rộng và sử dụng <code>float: right</code>.</p>
+        </div>
+    </div>
 
-/* Khối section chứa các cột */
-section {
-    margin-top: 20px;
-    max-width: 1000px;
-    margin-left: auto;
-    margin-right: auto;
-}
+    <div class="overflow-box">
+        Đây là nội dung rất dài mà chúng ta kiểm tra overflow. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue sempegit push origin mainverflow_float_exercise.html and overflow_float_exercise.css"li>)</a></li>>/li>)</a>
+warning: in the working copy of 'source/index.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'source/overflow_float_exercise.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'source/overflow_float_exercise.html', LF will be replaced by CRLF the next time Git touches it
+[main 47015c1] Add overflow_float_exercise.html and overflow_float_exercise.css
+ 3 files changed, 80 insertions(+)
+ create mode 100644 source/overflow_float_exercise.css
+ create mode 100644 source/overflow_float_exercise.html
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 1.64 KiB | 1.64 MiB/s, done.
+Total 6 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/nguyenlam06/GitProject.git
+   07688b3..47015c1  main -> main
 
-.box {
-    display: inline-block;
-    width: 28%;
-    padding: 20px;
-    background-color: lightblue;
-    margin: 10px;
-    border-radius: 6px;
-    border: 1px solid #90caf9;
-    vertical-align: top;
-}
+ASUS@LAPTOP-RKMC2OE6 MINGW64 ~/GitProject (main)
+$ # 1. Di chuyển vào thư mục dự án
+cd C:/Users/ASUS/GitProject
 
-/* Chân trang footer */
-footer {
-    margin-top: 40px;
-    padding: 15px;
-    color: #7f8c8d;
-    font-size: 14px;
-}
+# 2. Tạo file HTML source/overflow_float_exercise.html
+cat << 'EOF' > source/overflow_float_exercise.html
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bố cục với Float và Overflow</title>
+    <link rel="stylesheet" href="overflow_float_exercise.css">
+</head>
+<body>
+    <h1>Bố cục trang với float và overflow</h1>
+
+    <div class="container">
+        <div class="left-column">
+            <h2>Nội dung bên trái</h2>
+            <p>Cột này chiếm 50% độ rộng và sử dụng <code>float: left</code>.</p>
+        </div>
+        <div class="right-column">
+            <h2>Nội dung bên phải</h2>
+            <p>Cột này chiếm 48% độ rộng và sử dụng <code>float: right</code>.</p>
+        </div>
+    </div>
+
+    <div class="overflow-box">
+        Đây là nội dung rất dài mà chúng ta kiểm tra overflow. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue sempegit push origin mainverflow_float_exercise.html and overflow_float_exercise.css"li>)</a></li>>/li>)</a>
+warning: in the working copy of 'source/index.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'source/overflow_float_exercise.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'source/overflow_float_exercise.html', LF will be replaced by CRLF the next time Git touches it
+On branch main
+nothing to commit, working tree clean
+Everything up-to-date
+
+ASUS@LAPTOP-RKMC2OE6 MINGW64 ~/GitProject (main)
+$ # 1. Di chuyển vào thư mục dự án
+cd C:/Users/ASUS/GitProject
+
+# 2. Tạo file HTML source/responsive_navbar.html
+cat << 'EOF' > source/responsive_navbar.html
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navbar</title>
+    <link rel="stylesheet" href="responsive_navbar.css">
+    <script defer src="responsive_navbar.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">MyWebsite</div>
+        <ul class="nav-links">
+            <li><a href="#">Trang chủ</a></li>
+            <li><a href="#">Giới thiệu</a></li>
+            <li><a href="#">Dịch vụ</a></li>
+            <li><a href="#">Liên hệ</a></li>
+        </ul>
+        <div class="menu-icon">☰</div>
+    </nav>
+</body>
+</html>

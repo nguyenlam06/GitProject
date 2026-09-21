@@ -1,82 +1,447 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+git push origin mainesponsive_navbar practice (HTML, CSS, JS)"a></li></a></li></li>)</a></li>>/li>)</a>
+warning: in the working copy of 'source/index.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'source/responsive_navbar.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'source/responsive_navbar.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'source/responsive_navbar.js', LF will be replaced by CRLF the next time Git touches it
+[main 3b387d7] Add responsive_navbar practice (HTML, CSS, JS)
+ 4 files changed, 113 insertions(+)
+ create mode 100644 source/responsive_navbar.css
+ create mode 100644 source/responsive_navbar.html
+ create mode 100644 source/responsive_navbar.js
+Enumerating objects: 10, done.
+Counting objects: 100% (10/10), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (7/7), done.
+Writing objects: 100% (7/7), 1.65 KiB | 1.65 MiB/s, done.
+Total 7 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/nguyenlam06/GitProject.git
+   47015c1..3b387d7  main -> main
 
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f6f8;
-}
+ASUS@LAPTOP-RKMC2OE6 MINGW64 ~/GitProject (main)
+$ # 1. Di chuyển vào thư mục dự án
+cd C:/Users/ASUS/GitProject
 
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #333;
-    padding: 15px 20px;
-    color: white;
-    position: relative;
-}
+# 2. Tạo file HTML source/rwd_layout.html
+cat << 'EOF' > source/rwd_layout.html
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Web Design Layout</title>
+    <link rel="stylesheet" href="rwd_layout.css">
+</head>
+<body>
+    <header class="header">
+        <h1>Header / Banner</h1>
+    </header>
 
-.logo {
-    font-size: 24px;
-    font-weight: bold;
-}
+    <nav class="topnav">
+        <a href="#">Trang chủ</a>
+        <a href="#">Tin tức</a>
+        <a href="#">Sản phẩm</a>
+        <a href="#">Liên hệ</a>
+    </nav>
 
-.nav-links {
-    list-style: none;
-    display: flex;
-}
+    <div class="row">
+        <aside class="column left">
+            <h2>Cột trái (Sidebar)</h2>
+            <p>Danh mục liên kết hoặc bài viết nổi bật.</p>
+        </aside>
 
-.nav-links li {
-    margin: 0 15px;
-}
+git push origin mainwd_layout exercise (Responsive Web Design Layout)"/a></li></li>)</a></li>>/li>)</a>
+warning: in the working copy of 'source/index.html', LF will be replaced by CRLF the next time Git toucs it
+warning: in the working copy of 'source/rwd_layout.css', LF will be replaced by CRLF the next time Git uches it
+warning: in the working copy of 'source/rwd_layout.html', LF will be replaced by CRLF the next time Gitouches it
+[main a49e6e2] Add rwd_layout exercise (Responsive Web Design Layout)
+ 3 files changed, 144 insertions(+)
+ create mode 100644 source/rwd_layout.css
+ create mode 100644 source/rwd_layout.html
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 1.91 KiB | 1.91 MiB/s, done.
+Total 6 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/nguyenlam06/GitProject.git
+   3b387d7..a49e6e2  main -> main
 
-.nav-links a {
-    text-decoration: none;
-    color: white;
-    font-size: 18px;
-    transition: color 0.3s ease;
-}
+ASUS@LAPTOP-RKMC2OE6 MINGW64 ~/GitProject (main)
+$ # 1. Di chuyển vào thư mục dự án
+cd C:/Users/ASUS/GitProject
 
-.nav-links a:hover {
-    color: #00bcd4;
-}
+# 2. Tạo file HTML source/rwd_gallery.html
+cat << 'EOF' > source/rwd_gallery.html
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Image Gallery</title>
+    <link rel="stylesheet" href="rwd_gallery.css">
+</head>
+<body>
+    <h1>Thư Viện Ảnh Responsive (RWD Gallery)</h1>
+    <p class="description">Điều chỉnh kích thước cửa sổ trình duyệt để xem sự thay đổi số cột ảnh.</p>
 
-.menu-icon {
-    display: none;
-    font-size: 28px;
-    cursor: pointer;
-    user-select: none;
-}
+    <div class="gallery">
+        <div class="responsive">
+            <div class="img-box">
+                <img src="https://picsum.photos/id/1015/600/400" alt="Cảnh thiên nhiên 1">
+                <div class="desc">Thêm mô tả cho hình ảnh ở đây - Bức ảnh 1</div>
+            </div>
+        </div>
 
-/* ✅ Responsive cho Mobile */
-@media (max-width: 768px) {
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        background-color: #333;
-        width: 100%;
-        text-align: center;
-        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        z-index: 1000;
-    }
+        <div class="responsive">
+            <div class="img-box">
+                <img src="https://picsum.photos/id/1018/600/400" alt="Cảnh thiên nhiên 2">
+                <div class="desc">Thêm mô tả cho hình ảnh ở đây - Bức ảnh 2</div>
+            </div>
+git push origin mainwd_gallery exercise (Responsive Image Gallery)"i></a></li></li>)</a></li>>/li>)</a>
+warning: in the working copy of 'source/index.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'source/rwd_gallery.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'source/rwd_gallery.html', LF will be replaced by CRLF the next time Git touches it
+[main bb66a47] Add rwd_gallery exercise (Responsive Image Gallery)
+ 3 files changed, 121 insertions(+)
+ create mode 100644 source/rwd_gallery.css
+ create mode 100644 source/rwd_gallery.html
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 1.63 KiB | 1.63 MiB/s, done.
+Total 6 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/nguyenlam06/GitProject.git
+   a49e6e2..bb66a47  main -> main
 
-    .nav-links li {
-        padding: 15px 0;
-        border-bottom: 1px solid #444;
-    }
+ASUS@LAPTOP-RKMC2OE6 MINGW64 ~/GitProject (main)
+$ # 1. Di chuyển vào thư mục dự án
+cd C:/Users/ASUS/GitProject
 
-    .menu-icon {
-        display: block;
-    }
+# 2. Tạo file HTML source/grid_template_columns.html
+cat << 'EOF' > source/grid_template_columns.html
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thực hành: CSS grid-template-columns Property</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            padding: 20px;
+            color: #333;
+        }
 
-    /* Hiển thị menu khi toggle class active */
-    .nav-links.active {
-        display: flex;
-    }
-}
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            margin-top: 30px;
+            margin-bottom: 10px;
+            color: #16a085;
+        }
+
+git push origin mainSS grid-template-columns practice"e Form</a></li></a></li></li>)</a></li>>/li>)</a>
+warning: in the working copy of 'source/index.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'source/grid_template_columns.html', LF will be replaced by CRLF the next time Git touches it
+[main aa4abc6] Add CSS grid-template-columns practice
+ 2 files changed, 85 insertions(+)
+ create mode 100644 source/grid_template_columns.html
+Enumerating objects: 8, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 1.42 KiB | 1.42 MiB/s, done.
+Total 5 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/nguyenlam06/GitProject.git
+   bb66a47..aa4abc6  main -> main
+
+ASUS@LAPTOP-RKMC2OE6 MINGW64 ~/GitProject (main)
+$ # 1. Di chuyển vào thư mục dự án
+cd C:/Users/ASUS/GitProject
+
+# 2. Tạo file HTML source/grid_column_start.html
+cat << 'EOF' > source/grid_column_start.html
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thực hành: CSS grid-column-start Property</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            padding: 20px;
+            color: #333;
+        }
+
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            margin-top: 30px;
+            margin-bottom: 10px;
+            color: #e67e22;
+        }
+
+git push origin mainSS grid-column-start practice"imple Form</a></li></a></li></li>)</a></li>>/li>)</a>
+warning: in the working copy of 'source/index.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'source/grid_column_start.html', LF will be replaced by CRLF the next time Git touches it
+[main 2534df1] Add CSS grid-column-start practice
+ 2 files changed, 97 insertions(+)
+ create mode 100644 source/grid_column_start.html
+Enumerating objects: 8, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 1.42 KiB | 1.42 MiB/s, done.
+Total 5 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/nguyenlam06/GitProject.git
+   aa4abc6..2534df1  main -> main
+
+ASUS@LAPTOP-RKMC2OE6 MINGW64 ~/GitProject (main)
+$ # 1. Di chuyển vào thư mục dự án
+cd C:/Users/ASUS/GitProject
+
+# 2. Tạo file HTML source/grid_row_gap.html
+cat << 'EOF' > source/grid_row_gap.html
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thực hành: CSS grid-row-gap Property</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            padding: 20px;
+            color: #333;
+        }
+
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            margin-top: 30px;
+            margin-bottom: 10px;
+            color: #8e44ad;
+        }
+
+git push origin mainSS grid-row-gap practice"nh: Simple Form</a></li></a></li></li>)</a></li>>/li>)</a>
+warning: in the working copy of 'source/index.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'source/grid_row_gap.html', LF will be replaced by CRLF the next time Git touches it
+[main 3dddcd7] Add CSS grid-row-gap practice
+ 2 files changed, 99 insertions(+)
+ create mode 100644 source/grid_row_gap.html
+Enumerating objects: 8, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 1.28 KiB | 1.28 MiB/s, done.
+Total 5 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/nguyenlam06/GitProject.git
+   2534df1..3dddcd7  main -> main
+
+ASUS@LAPTOP-RKMC2OE6 MINGW64 ~/GitProject (main)
+$ # 1. Di chuyển vào thư mục dự án
+cd C:/Users/ASUS/GitProject
+
+# 2. Tạo file HTML source/grid_row.html
+cat << 'EOF' > source/grid_row.html
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thực hành: CSS grid-row Property</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            padding: 20px;
+            color: #333;
+        }
+
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            margin-top: 30px;
+            margin-bottom: 10px;
+            color: #d35400;
+        }
+
+git push origin mainSS grid-row practice"c hành: Simple Form</a></li></a></li></li>)</a></li>>/li>)</a>
+warning: in the working copy of 'source/index.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'source/grid_row.html', LF will be replaced by CRLF the next time Git touches it
+[main d6ee926] Add CSS grid-row practice
+ 2 files changed, 86 insertions(+)
+ create mode 100644 source/grid_row.html
+Enumerating objects: 8, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 1.29 KiB | 1.29 MiB/s, done.
+Total 5 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/nguyenlam06/GitProject.git
+   3dddcd7..d6ee926  main -> main
+
+ASUS@LAPTOP-RKMC2OE6 MINGW64 ~/GitProject (main)
+$ # 1. Di chuyển vào thư mục dự án
+cd C:/Users/ASUS/GitProject
+
+# 2. Tạo file HTML source/grid_gap.html
+cat << 'EOF' > source/grid_gap.html
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thực hành: CSS grid-gap Property</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            padding: 20px;
+            color: #333;
+        }
+
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            margin-top: 30px;
+            margin-bottom: 10px;
+            color: #27ae60;
+        }
+
+git push origin mainSS grid-gap practice"c hành: Simple Form</a></li></a></li></li>)</a></li>>/li>)</a>
+warning: in the working copy of 'source/index.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'source/grid_gap.html', LF will be replaced by CRLF the next time Git touches it
+[main c5efae6] Add CSS grid-gap practice
+ 2 files changed, 83 insertions(+)
+ create mode 100644 source/grid_gap.html
+Enumerating objects: 8, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 1.20 KiB | 1.20 MiB/s, done.
+# 1. Di chuyển vào thư mục dự án
+cd C:/Users/ASUS/GitProject
+
+# 2. Tạo file HTML source/flex_basis.html
+cat << 'EOF' > source/flex_basis.html
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thực hành: CSS flex-basis Property</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            padding: 20px;
+            color: #333;
+        }
+
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            margin-top: 30px;
+            margin-bottom: 10px;
+            color: #8e44ad;
+        }
+
+        .flex-container {
+            display: flex;
+            background-color: #2c3e50;
+            padding: 15px;
+            border-radius: 8px;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .flex-item {
+            background-color: #8e44ad;
+            color: white;
+            padding: 20px 10px;
+            font-size: 15px;
+            font-weight: bold;
+            text-align: center;
+            border-radius: 4px;
+        }
+
+        /* Ví dụ 1: Sử dụng đơn vị độ dài xác định (px, %) */
+        .ex1-item1 {
+            flex-basis: 200px; /* Kích thước ban đầu là 200px */
+            background-color: #e74c3c;
+        }
+
+        .ex1-item2 {
+            flex-basis: 40%; /* Kích thước ban đầu chiếm 40% container */
+            background-color: #3498db;
+        }
+
+        /* Ví dụ 2: Giá trị auto (theo kích thước nội dung) vs initial */
+        .ex2-item1 {
+            flex-basis: auto; /* Tự động theo kích thước nội dung */
+            background-color: #2ecc71;
+        }
+
+        .ex2-item2 {
+            flex-basis: 300px;
+            background-color: #f39c12;
+        }
+    </style>
+</head>
+<body>
+    <h1>Thực Hành: CSS flex-basis Property</h1>
+
+    <h2>Ví dụ 1: Sử dụng kích thước cố định (flex-basis: 200px & 40%)</h2>
+    <p>Item 1 có kích thước ban đầu là <strong>200px</strong>, Item 2 chiếm <strong>40%</strong> chiều rộng khung chứa.</p>
+    <div class="flex-container">
+        <div class="flex-item ex1-item1">Item 1 (200px)</div>
+        <div class="flex-item ex1-item2">Item 2 (40%)</div>
+        <div class="flex-item">Item 3 (Auto)</div>
+    </div>
+
+    <h2>Ví dụ 2: Sử dụng flex-basis: auto & flex-basis: 300px</h2>
+    <p>Item 1 sử dụng <code>flex-basis: auto</code> (phụ thuộc nội dung bên trong), Item 2 được thiết lập cố định <code>300px</code>.</p>
+    <div class="flex-container">
+        <div class="flex-item ex2-item1">Item 1 (Nội dung dài hơn sẽ co giãn)</div>
+        <div class="flex-item ex2-item2">Item 2 (300px)</div>
+        <div class="flex-item">Item 3</div>
+    </div>
+</body>
+</html>
