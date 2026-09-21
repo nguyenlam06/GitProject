@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thực hành: Xây dựng bố cục trang web với CSS Flexbox</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+        }
+
+        /* Container chính xếp theo chiều dọc */
+        .container {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .header, .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .header h1 {
+            font-size: 24px;
+        }
+
+        .nav {
+            background-color: #444;
+            color: white;
+            text-align: center;
+            padding: 12px;
+        }
+
+        .nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        .nav a:hover {
+            color: #1abc9c;
+        }
+
+        /* Main container chứa Content và Sidebar sử dụng Flexbox */
+        .main-container {
+            display: flex;
+            flex: 1;
+        }
+
+        .content {
+            flex: 3;
+            padding: 25px;
+            background-color: #ffffff;
+        }
+
+        .content h2 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+        }
+
+        .content p {
+            line-height: 1.6;
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        .sidebar {
+            flex: 1;
+            background-color: #f4f4f4;
+            padding: 25px;
+            border-left: 1px solid #ddd;
+        }
+
+        .sidebar h3 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+        }
+
+        .sidebar ul {
+            list-style: none;
+        }
+
+        .sidebar ul li {
+            margin-bottom: 10px;
+        }
+
+        .sidebar ul li a {
+            color: #2980b9;
+            text-decoration: none;
+        }
+
+        .footer {
+            font-size: 14px;
+        }
+
+        /* Responsive với Media Queries (Mobile màn hình <= 768px) */
+        @media (max-width: 768px) {
+            .main-container {
+                flex-direction: column;
+            }
+
+            .sidebar {
+                border-left: none;
+                border-top: 1px solid #ddd;
+            }
+
+            .nav a {
+                display: inline-block;
+                margin: 5px 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Trang Web Bố Cục Flexbox</h1>
+        </header>
+
+        <nav class="nav">
+            <a href="#">Trang chủ</a>
+            <a href="#">Giới thiệu</a>
+            <a href="#">Bài viết</a>
+            <a href="#">Liên hệ</a>
+        </nav>
+
+        <div class="main-container">
+            <main class="content">
+                <h2>Nội dung chính (Main Content)</h2>
+                <p>Trang web này được xây dựng sử dụng kỹ thuật <strong>CSS Flexbox</strong>. Cấu trúc toàn trang được quản lý bởi container chính có <code>flex-direction: column</code>.</p>
+                <p>Khung <code>.main-container</code> chứa phần Content và Sidebar. Nhờ sử dụng thuộc tính <code>flex: 3</code> cho Content và <code>flex: 1</code> cho Sidebar, giao diện tự động chia tỉ lệ không gian theo mong muốn (75% - 25%).</p>
+                <p>Khi hiển thị trên các thiết bị màn hình nhỏ (Mobile &lt;= 768px), Media Query sẽ kích hoạt và đổi <code>flex-direction: column</code> cho phần <code>.main-container</code>, giúp Sidebar rớt xuống bên dưới Content rất tiện lợi.</p>
+            </main>
+
+            <aside class="sidebar">
+                <h3>Sidebar</h3>
+                <ul>
+                    <li><a href="#">📌 Tin mới nhất</a></li>
+                    <li><a href="#">🔥 Quảng cáo hot</a></li>
+                    <li><a href="#">📢 Thông báo chung</a></li>
+                </ul>
+            </aside>
+        </div>
+
+        <footer class="footer">
+            © 2026 CodeGym Practice | CSS Flexbox Responsive Layout
+        </footer>
+    </div>
+</body>
+</html>
