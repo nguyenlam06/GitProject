@@ -1,0 +1,52 @@
+/* Reset box-sizing để padding không làm trôi bố cục */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+h1 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+/* Khối container chứa 2 cột float */
+.container {
+    width: 100%;
+    overflow: hidden; /* Xử lý trôi bố cục cho các khối con float */
+    margin-bottom: 30px;
+    background-color: #ffffff;
+    border-radius: 6px;
+    border: 1px solid #e0e0e0;
+}
+
+.left-column {
+    width: 50%;
+    float: left;
+    background-color: lightgray;
+    padding: 20px;
+}
+
+.right-column {
+    width: 48%;
+    float: right;
+    background-color: lightgreen;
+    padding: 20px;
+}
+
+/* Khối nội dung quá dài có thanh cuộn */
+.overflow-box {
+    width: 300px;
+    height: 100px;
+    background-color: lightcoral;
+    padding: 10px;
+    overflow: auto; /* Hiển thị thanh cuộn khi nội dung quá dài */
+    border-radius: 6px;
+    line-height: 1.5;
+    border: 1px solid #e57373;
+}
