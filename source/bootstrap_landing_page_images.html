@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập: Landing Page với Bootstrap và Hình Ảnh</title>
+    <!-- Nhúng Bootstrap 5 CSS CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <!-- Nhúng Bootstrap Icons CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+</head>
+<body>
+
+    <!-- 1. Hero Banner / Jumbotron Section -->
+    <header class="bg-dark text-white text-center py-5 position-relative style-hero" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://picsum.photos/1600/600?grayscale') center/cover no-repeat; padding-top: 100px !important; padding-bottom: 100px !important;">
+        <div class="container my-5">
+            <h1 class="display-3 fw-bold mb-3">Giải Pháp Công Nghệ Đột Phá</h1>
+            <p class="lead mb-4 mx-auto style-desc" style="max-width: 700px;">Nâng tầm doanh nghiệp của bạn với hệ sinh thái phần mềm tối ưu, hiện đại và bảo mật hàng đầu.</p>
+            <a href="#register" class="btn btn-primary btn-lg px-4 py-2 fw-bold shadow">Đăng Ký Khám Phá Ngay</a>
+        </div>
+    </header>
+
+    <!-- 2. Section Giới Thiệu (Hình ảnh + Mô tả sản phẩm) -->
+    <section class="py-5 bg-light">
+        <div class="container py-4">
+            <div class="row align-items-center g-5">
+                <div class="col-12 col-lg-6">
+                    <!-- Áp dụng Bootstrap Images (img-fluid) -->
+                    <img src="https://picsum.photos/800/500" alt="Giới thiệu sản phẩm" class="img-fluid rounded-4 shadow-lg">
+                </div>
+                <div class="col-12 col-lg-6">
+                    <h2 class="fw-bold text-dark mb-3">Về Nền Tảng Của Chúng Tôi</h2>
+                    <p class="text-muted lead">Chúng tôi mang đến giải pháp chuyển đổi số toàn diện giúp tối ưu hóa quy trình làm việc, nâng cao hiệu suất vận hành và gia tăng trải nghiệm khách hàng.</p>
+                    <p class="text-muted">Giao diện thân thiện, khả năng tích hợp linh hoạt cùng tính bảo mật vượt trội giúp hệ thống của bạn hoạt động ổn định 24/7 trên mọi nền tảng thiết bị.</p>
+                    <a href="#features" class="btn btn-outline-primary mt-2">Tìm Hiểu Chi Tiết</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Section Danh Sách Tính Năng (Row 3 Cột + Icons) -->
+    <section id="features" class="py-5">
+        <div class="container py-4 text-center">
+            <h2 class="fw-bold mb-2">Tính Năng Nổi Bật</h2>
+            <p class="text-muted mb-5">Những ưu điểm giúp chúng tôi tạo nên sự khác biệt</p>
+            
+            <div class="row g-4">
+                <!-- Tính năng 1 -->
+                <div class="col-12 col-md-4">
+                    <div class="card h-100 p-4 border-0 shadow-sm rounded-3">
+                        <div class="card-body">
+                            <div class="bg-primary bg-opacity-10 text-primary rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 70px; height: 70px;">
+                                <i class="bi bi-lightning-charge fs-2"></i>
+                            </div>
+                            <h3 class="h5 fw-bold mb-3">Tốc Độ Vượt Trội</h3>
+                            <p class="text-muted mb-0">Hệ thống xử lý dữ liệu tức thì, tối ưu thời gian phản hồi và duy trì hiệu suất cao nhất.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tính năng 2 -->
+                <div class="col-12 col-md-4">
+                    <div class="card h-100 p-4 border-0 shadow-sm rounded-3">
+                        <div class="card-body">
+                            <div class="bg-primary bg-opacity-10 text-primary rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 70px; height: 70px;">
+                                <i class="bi bi-shield-lock fs-2"></i>
+                            </div>
+                            <h3 class="h5 fw-bold mb-3">Bảo Mật Tuyệt Đối</h3>
+                            <p class="text-muted mb-0">Mã hóa dữ liệu chuẩn quốc tế, bảo vệ thông tin doanh nghiệp trước mọi rủi ro an ninh mạng.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tính năng 3 -->
+                <div class="col-12 col-md-4">
+                    <div class="card h-100 p-4 border-0 shadow-sm rounded-3">
+                        <div class="card-body">
+                            <div class="bg-primary bg-opacity-10 text-primary rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 70px; height: 70px;">
+                                <i class="bi bi-device-ssd fs-2"></i>
+                            </div>
+                            <h3 class="h5 fw-bold mb-3">Đa Nền Tảng</h3>
+                            <p class="text-muted mb-0">Tương thích hoàn hảo trên các thiết bị Mobile, Tablet và Desktop mà không ảnh hưởng trải nghiệm.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Section Kêu Gọi Hành Động (CTA Section) -->
+    <section id="register" class="bg-primary text-white text-center py-5">
+        <div class="container py-4">
+            <h2 class="display-6 fw-bold mb-3">Sẵn Sàng Bắt Đầu Hành Trình Ngay Hôm Nay?</h2>
+            <p class="lead mb-4 text-white-50">Đăng ký tài khoản dùng thử miễn phí trong 14 ngày. Không cần thẻ tín dụng.</p>
+            <a href="#" class="btn btn-light btn-lg px-5 py-3 fw-bold text-primary shadow">Tạo Tài Khoản Miễn Phí</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-4">
+        <div class="container">
+            <p class="mb-0 text-white-50">&copy; 2026 TechLanding. All rights reserved. Designed with Bootstrap 5.</p>
+        </div>
+    </footer>
+
+    <!-- Nhúng Bootstrap 5 JS Bundle CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
