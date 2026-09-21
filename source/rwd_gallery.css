@@ -1,0 +1,77 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.description {
+    color: #666;
+    margin-bottom: 30px;
+}
+
+/* Khối chứa gallery chính */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -6px;
+}
+
+/* Khối bao ngoài của mỗi bức ảnh */
+.responsive {
+    padding: 6px;
+    float: left;
+    /* Mặc định trên màn hình lớn (>700px): 4 ảnh / dòng */
+    width: 24.99999%;
+}
+
+.img-box {
+    border: 1px solid #ccc;
+    background-color: #fff;
+    border-radius: 4px;
+    overflow: hidden;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.img-box:hover {
+    border: 1px solid #777;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.img-box img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.desc {
+    padding: 15px;
+    text-align: center;
+    font-size: 14px;
+    color: #333;
+}
+
+/* ✅ Màn hình nhỏ hơn 700px: 2 ảnh / dòng */
+@media (max-width: 700px) {
+    .responsive {
+        width: 49.99999%;
+    }
+}
+
+/* ✅ Màn hình nhỏ hơn 500px: 1 ảnh / dòng */
+@media (max-width: 500px) {
+    .responsive {
+        width: 100%;
+    }
+}
